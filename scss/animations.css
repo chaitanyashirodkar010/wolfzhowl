@@ -1,0 +1,141 @@
+.main-banner {
+  background-color: #0d0d0d;
+  height: 100vh;
+  position: relative;
+}
+
+.main-banner .outer-banner {
+  background-color: #ffffff;
+}
+
+.main-banner .outer-banner .initial-banner {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.main-banner .outer-banner .initial-banner img {
+  -webkit-transform: scaleX(1.15);
+          transform: scaleX(1.15);
+  margin-bottom: 20px;
+  margin-top: -45px;
+}
+
+.main-banner .black-bg {
+  background-color: #000000;
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9;
+}
+
+.main-banner .black-bg .animation-block {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.main-banner .black-bg .animation-block img {
+  max-width: 370px;
+}
+
+.brand-animation-body {
+  background: black;
+}
+
+.brand-animation-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.brand-animation-container.grid,
+.brand-animation-container.columns {
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.brand-animation-container.final {
+  position: absolute;
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: unset;
+}
+
+.letter {
+  text-align: center;
+  color: black;
+  font-size: 10vmax;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2px 6px;
+}
+
+.brand-animation-container.columns .letter {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.for,
+.gsap {
+  font-size: 5vmax;
+  color: white;
+}
+
+.for {
+  padding: 2px 1.6vmax;
+  font-weight: 300;
+  display: none;
+}
+
+.gsap {
+  padding: 2px 0;
+  font-weight: 600;
+  display: none;
+}
+
+.brand-animation-container.final .for,
+.brand-animation-container.final .gsap {
+  display: block;
+}
+
+.brand-animation-container.plain .letter {
+  background: transparent;
+  color: white;
+  padding: 0;
+}
+/*# sourceMappingURL=animations.css.map */

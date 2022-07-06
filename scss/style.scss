@@ -1,0 +1,447 @@
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+$yellow: #f9ad19;
+@font-face {
+    font-family: "A Love of Thunder";
+    src: url(../font/a-love-of-thunder.ttf);
+}
+.navbar {
+    padding: 10px 0;
+    .hamburger {
+        width: 30px;
+        .bar {
+            width: 100%;
+            height: 4px;
+            background-color: black;
+            border-radius: 50px;
+            &:nth-child(2) {
+                width: 25px;
+                margin: 5px 0;
+            }
+        }
+    }
+}
+.grid-hero-banner {
+    height: 100vh;
+    background-color: white;
+    .row {
+        & > .col-md-5 {
+            height: 100vh;
+            @media screen and (min-width: 992px) {
+                width: 38%;
+            }
+            padding: 0;
+            display: flex;
+        }
+        .col-md-2 {
+            @media screen and (min-width: 992px) {
+                width: 24%;
+            }
+        }
+    }
+    .col-div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 1;
+        width: 33.33333333%;
+        .image {
+            border: thin solid white;
+            flex: 1;
+            position: relative;
+            img {
+                position: absolute;
+                object-fit: cover;
+                object-position: center;
+                height: 100%;
+            }
+        }
+    }
+    .text-block {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 95%;
+        h6 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 27px;
+            line-height: 35px;
+            /* identical to box height */
+
+            color: #000000;
+        }
+        .mainlogo {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+        .wolfhowlz {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                filter: invert(1);
+            }
+        }
+        .yellow-line {
+            margin: 20px auto;
+            width: 90%;
+        }
+        p {
+            font-family: "Avenir LT Std";
+            font-style: normal;
+            font-weight: 750;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+
+            color: #000000;
+        }
+    }
+}
+body {
+    background: #e3e3e3;
+    letter-spacing: 0.2px;
+}
+// font-family: 'Avenir LT Std', sans-serif;
+.yellow-line {
+    border: 1px solid $yellow;
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        background: $yellow;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 50%;
+    }
+    &::before {
+        left: -5px;
+    }
+    &::after {
+        right: -5px;
+    }
+}
+.description {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 124%;
+    /* or 26px */
+
+    color: #504b4b;
+}
+.section- {
+    &title {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 61px;
+        line-height: 58px;
+        text-align: center;
+        color: #000000;
+    }
+    &subtitle {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 118%;
+
+        text-align: center;
+
+        color: #000000;
+        &-large {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 27px;
+            line-height: 95.5%;
+            /* identical to box height, or 26px */
+
+            text-align: center;
+
+            color: #010101;
+        }
+    }
+    &description {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 118%;
+
+        text-align: center;
+
+        color: #504b4b;
+    }
+}
+.about {
+    background: #e3e3e3;
+    padding: 80px 0;
+    .container {
+        max-width: 500px;
+        .section- {
+            &description {
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+        }
+        .yellow-line {
+            margin: auto;
+            margin-top: 20px;
+            width: 90%;
+        }
+        .counter-section {
+            .sections-slots {
+                @media screen and (max-width: 992px) {
+                    flex: 1;
+                    &:nth-child(2) {
+                        margin: 0 10px;
+                    }
+                }
+                @media screen and (min-width: 992px) {
+                    min-width: 122px;
+                }
+                min-height: 104px;
+                background: #ffffff;
+                border: 1px solid rgba(0, 0, 0, 0.18);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                border-radius: 4px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                margin: 25px 5px 0;
+                .slots-title {
+                    font-family: "A Love of Thunder";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 29px;
+                    line-height: 118%;
+                    /* or 34px */
+
+                    text-align: center;
+
+                    color: #383535;
+                }
+                .slots-description {
+                    font-family: "Avenir LT Std";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 102.5%;
+                    /* or 18px */
+
+                    text-align: center;
+
+                    color: #312f2f;
+                }
+            }
+        }
+    }
+}
+// wolf-services
+.wolf-services {
+    padding: 100px 0 80px;
+    position: relative;
+    background-position-x: -100px;
+    background-image: url(../images/servicesbg.png);
+
+    // &::before {
+    //     background-image: url(../images/servicesbg.png);
+    //     content: "";
+    //     position: absolute;
+    //     height: 100%;
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     z-index: -1;
+    //     top: -100px;
+    // }
+    img {
+        max-width: 468px;
+        width: 100%;
+    }
+    .container {
+        max-width: 1112px;
+    }
+    .text-block {
+        margin: auto;
+        text-align: center;
+        max-width: 496px;
+        .yellow-line {
+            width: 70%;
+            margin: auto;
+        }
+    }
+    .image-text-block {
+        text-align: left;
+        h6 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 118%;
+
+            color: #000000;
+        }
+        ul {
+            li {
+                font-family: "Avenir LT Std";
+                font-style: normal;
+                font-weight: 750;
+                font-size: 21px;
+                line-height: 192%;
+                color: #504b4b;
+                position: relative;
+                list-style-type: none;
+                &::after {
+                    content: "";
+                    height: 43px;
+                    width: 43px;
+                    position: absolute;
+                    top: 3px;
+                    bottom: 0;
+                    margin: auto;
+                    left: -40px;
+                    background-image: url(../images/arrow.svg);
+                    background-size: 100%;
+                    background-position: center;
+                }
+            }
+        }
+    }
+    .reverse-row {
+        .row {
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                justify-content: center;
+                .col-md-6:nth-child(2) {
+                    padding-left: 8%;
+                }
+                .col-md-6:nth-child(1) {
+                    padding-right: 2%;
+                }
+            }
+        }
+    }
+}
+
+.tools {
+    background-image: url(../images/toolsbg.png);
+    background-size: cover;
+    padding: 80px 0;
+    .container {
+        max-width: 1112px;
+    }
+    .section-title {
+        font-size: 48px;
+    }
+    .image-text-block {
+        text-align: left;
+        h6 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 118%;
+
+            color: #000000;
+        }
+    }
+    .row {
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+    }
+    .description {
+        line-height: 130%;
+        margin-top: 30px;
+    }
+}
+.brands {
+    display: flex;
+    margin-top: 30px;
+    .brand {
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+        min-height: 92px;
+        flex: 1;
+        &:nth-child(2) {
+            margin: 0 10px;
+        }
+    }
+}
+.purpose {
+    padding: 80px 0;
+    background: #121212;
+    .container {
+        max-width: 1112px;
+    }
+}
+footer {
+    background: url(../images/footerbg.png);
+    padding: 80px 0;
+    background-size: contain;
+    .col-md-3,
+    .col-md-2 {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            border-right: 1px solid rgba(255, 255, 255, 0.26);
+            height: 100%;
+            right: -30px;
+            top: 0;
+        }
+    }
+    h6 {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 100.5%;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+    p {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 750;
+        font-size: 16px;
+        line-height: 118%;
+        /* or 19px */
+
+        color: #595858;
+    }
+    ul {
+        padding-left: 0;
+        li {
+            list-style-type: none;
+            a {
+                font-family: "Avenir LT Std";
+                font-style: normal;
+                font-weight: 750;
+                font-size: 16px;
+                line-height: 168.5%;
+                text-decoration: none;
+                /* or 27px */
+
+                color: #595858;
+            }
+        }
+    }
+}
