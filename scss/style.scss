@@ -20,12 +20,29 @@ $yellow: #f9ad19;
         }
     }
 }
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 85% !important;
+    }
+}
 .grid-hero-banner {
-    height: 100vh;
+    @media screen and (max-width: 992px) {
+        .container {
+            max-width: 99% !important;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        height: 100vh;
+    }
     background-color: white;
     .row {
         & > .col-md-5 {
-            height: 100vh;
+            @media screen and (min-width: 992px) {
+                height: 100vh;
+            }
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
+            }
             @media screen and (min-width: 992px) {
                 width: 38%;
             }
@@ -40,7 +57,12 @@ $yellow: #f9ad19;
     }
     .col-div {
         display: flex;
-        flex-direction: column;
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 992px) {
+            flex-direction: column;
+        }
         height: 100%;
         flex: 1;
         width: 33.33333333%;
@@ -48,6 +70,7 @@ $yellow: #f9ad19;
             border: thin solid white;
             flex: 1;
             position: relative;
+
             img {
                 position: absolute;
                 object-fit: cover;
@@ -58,30 +81,45 @@ $yellow: #f9ad19;
     }
     .text-block {
         text-align: center;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translate(-50%, -50%);
-        left: 50%;
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
         width: 95%;
+        margin: auto;
         h6 {
             font-family: "A Love of Thunder";
             font-style: normal;
             font-weight: 400;
-            font-size: 27px;
+            font-size: 1em;
+            @media screen and (min-width: 992px) {
+                font-size: 1.6em;
+            }
             line-height: 35px;
-            /* identical to box height */
 
             color: #000000;
         }
         .mainlogo {
-            width: 90%;
+            width: 60%;
+            @media screen and (min-width: 992px) {
+                width: 90%;
+            }
             margin-bottom: 20px;
         }
         .wolfhowlz {
             display: flex;
             align-items: center;
             justify-content: center;
+            @media screen and (max-width: 992px) {
+                width: 40%;
+                margin: auto;
+                img {
+                    width: 100%;
+                }
+            }
             img {
                 filter: invert(1);
             }
@@ -99,6 +137,28 @@ $yellow: #f9ad19;
             text-align: center;
 
             color: #000000;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .small {
+        &-top-row {
+            .image {
+                height: 65px;
+            }
+        }
+        &-mid-row {
+            .image {
+                height: 108px;
+            }
+        }
+        &-bottom-row {
+            .image {
+                height: 88px;
+            }
+        }
+        img {
+            position: absolute;
         }
     }
 }
@@ -133,7 +193,9 @@ body {
     font-family: "Avenir LT Std";
     font-style: normal;
     font-weight: 400;
-    font-size: 21px;
+    @media screen and (min-width: 992px) {
+        font-size: 21px;
+    }
     line-height: 124%;
     /* or 26px */
 
@@ -144,8 +206,15 @@ body {
         font-family: "A Love of Thunder";
         font-style: normal;
         font-weight: 400;
-        font-size: 61px;
-        line-height: 58px;
+        font-size: 1.8em;
+        @media screen and (max-width: 992px) {
+            margin: auto;
+            line-height: 95.5%;
+        }
+        @media screen and (min-width: 992px) {
+            font-size: 3em;
+            line-height: 58px;
+        }
         text-align: center;
         color: #000000;
     }
@@ -153,8 +222,12 @@ body {
         font-family: "A Love of Thunder";
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 12px;
         line-height: 118%;
+        @media screen and (min-width: 992px) {
+            font-size: 18px;
+            line-height: 118%;
+        }
 
         text-align: center;
 
@@ -176,7 +249,10 @@ body {
         font-family: "Avenir LT Std";
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 12px;
+        @media screen and (min-width: 992px) {
+            font-size: 18px;
+        }
         line-height: 118%;
 
         text-align: center;
@@ -186,7 +262,10 @@ body {
 }
 .about {
     background: #e3e3e3;
-    padding: 80px 0;
+    padding: 50px 0;
+    @media screen and (min-width: 992px) {
+        padding: 80px 0;
+    }
     .container {
         max-width: 500px;
         .section- {
@@ -197,12 +276,15 @@ body {
         }
         .yellow-line {
             margin: auto;
-            margin-top: 20px;
             width: 90%;
         }
         .counter-section {
+            @media screen and (max-width: 992px) {
+                max-width: 200px;
+                margin: auto;
+            }
             .sections-slots {
-                @media screen and (max-width: 992px) {
+                @media screen and (min-width: 992px) {
                     flex: 1;
                     &:nth-child(2) {
                         margin: 0 10px;
@@ -221,7 +303,6 @@ body {
                 align-items: center;
                 flex-direction: column;
                 justify-content: center;
-                margin: 25px 5px 0;
                 .slots-title {
                     font-family: "A Love of Thunder";
                     font-style: normal;
@@ -252,7 +333,10 @@ body {
 }
 // wolf-services
 .wolf-services {
-    padding: 100px 0 80px;
+    padding: 100px 0 40px;
+    @media screen and (min-width: 992px) {
+        padding: 100px 0 80px;
+    }
     position: relative;
     background-position-x: -100px;
     background-image: url(../images/servicesbg.png);
@@ -285,14 +369,20 @@ body {
         }
     }
     .image-text-block {
-        text-align: left;
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
         h6 {
             font-family: "A Love of Thunder";
             font-style: normal;
             font-weight: 400;
-            font-size: 38px;
+            font-size: 20px;
             line-height: 118%;
-
+            text-align: center;
+            @media screen and (min-width: 992px) {
+                font-size: 38px;
+                text-align: left;
+            }
             color: #000000;
         }
         ul {
@@ -300,7 +390,9 @@ body {
                 font-family: "Avenir LT Std";
                 font-style: normal;
                 font-weight: 750;
-                font-size: 21px;
+                @media screen and (min-width: 992px) {
+                    font-size: 21px;
+                }
                 line-height: 192%;
                 color: #504b4b;
                 position: relative;
@@ -310,9 +402,12 @@ body {
                     height: 43px;
                     width: 43px;
                     position: absolute;
-                    top: 3px;
-                    bottom: 0;
-                    margin: auto;
+                    top: -5px;
+                    @media screen and (min-width: 992px) {
+                        top: 3px;
+                        bottom: 0;
+                        margin: auto;
+                    }
                     left: -40px;
                     background-image: url(../images/arrow.svg);
                     background-size: 100%;
@@ -321,16 +416,26 @@ body {
             }
         }
     }
+    .section-subtitle-large {
+        font-size: 13px;
+        @media screen and (min-width: 992px) {
+            font-size: 27px;
+        }
+    }
     .reverse-row {
         .row {
             &:nth-child(even) {
                 flex-direction: row-reverse;
                 justify-content: center;
                 .col-md-6:nth-child(2) {
-                    padding-left: 8%;
+                    @media screen and (min-width: 992px) {
+                        padding-left: 8%;
+                    }
                 }
                 .col-md-6:nth-child(1) {
-                    padding-right: 2%;
+                    @media screen and (min-width: 992px) {
+                        padding-right: 2%;
+                    }
                 }
             }
         }
@@ -339,23 +444,41 @@ body {
 
 .tools {
     background-image: url(../images/toolsbg.png);
-    background-size: cover;
-    padding: 80px 0;
+    background-size: contain;
+    @media screen and (min-width: 992px) {
+        background-size: cover;
+    }
+    padding: 50px 0;
+
+    @media screen and (min-width: 992px) {
+        padding: 80px 0;
+    }
     .container {
         max-width: 1112px;
     }
     .section-title {
-        font-size: 48px;
+        font-size: 27px;
+        margin-bottom: 30px;
+        @media screen and (min-width: 992px) {
+            font-size: 48px;
+            margin-bottom: 0px;
+        }
     }
     .image-text-block {
-        text-align: left;
+        text-align: center;
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
         h6 {
             font-family: "A Love of Thunder";
             font-style: normal;
             font-weight: 400;
-            font-size: 38px;
+            font-size: 20px;
+            margin-top: 20px;
+            @media screen and (min-width: 992px) {
+                font-size: 38px;
+            }
             line-height: 118%;
-
             color: #000000;
         }
     }
@@ -367,7 +490,12 @@ body {
     }
     .description {
         line-height: 130%;
-        margin-top: 30px;
+        margin-top: 10px;
+        font-size: 15px;
+        @media screen and (min-width: 992px) {
+            line-height: 130%;
+            margin-top: 30px;
+        }
     }
 }
 .brands {
@@ -393,19 +521,30 @@ body {
     }
 }
 footer {
-    background: url(../images/footerbg.png);
-    padding: 80px 0;
-    background-size: contain;
+    background: url(../images/footersmbg.png);
+    padding: 40px 0;
+    @media screen and (min-width: 992px) {
+        background: url(../images/footerbg.png);
+        background-size: contain;
+        padding: 80px 0;
+    }
+
+    background-size: cover;
     .col-md-3,
     .col-md-2 {
         position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            border-right: 1px solid rgba(255, 255, 255, 0.26);
-            height: 100%;
-            right: -30px;
-            top: 0;
+        @media screen and (min-width: 992px) {
+            &::after {
+                content: "";
+                position: absolute;
+                border-right: 1px solid rgba(255, 255, 255, 0.26);
+                height: 100%;
+                right: -30px;
+                top: 0;
+            }
+            &:last-child:after {
+                display: none;
+            }
         }
     }
     h6 {
@@ -443,5 +582,24 @@ footer {
                 color: #595858;
             }
         }
+    }
+    .border-bottom {
+        border-bottom: thin solid #595858 !important;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        @media screen and (min-width: 992px) {
+            border-bottom: none !important;
+        }
+    }
+    .copyright {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        @media screen and (min-width: 992px) {
+            font-size: 15px;
+        }
+        line-height: 18px;
+        color: #9b9797;
     }
 }
