@@ -440,6 +440,10 @@ body {
   }
 }
 
+.section {
+  overflow: hidden;
+}
+
 .section-title {
   font-family: "A Love of Thunder";
   font-style: normal;
