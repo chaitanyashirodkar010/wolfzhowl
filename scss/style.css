@@ -944,4 +944,31 @@ footer .copyright {
     font-size: 15px;
   }
 }
+
+.anim-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 50px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.anim-text .yellow-line {
+  margin-top: 20px;
+}
+
+h1 {
+  z-index: 9999;
+  max-width: 800px;
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 84px;
+  color: #ffffff;
+  height: 160px;
+}
 /*# sourceMappingURL=style.css.map */

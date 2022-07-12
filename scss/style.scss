@@ -737,6 +737,31 @@ footer {
         color: #9b9797;
     }
 }
+.anim-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 50px;
+
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    .yellow-line {
+        margin-top: 20px;
+    }
+}
+h1 {
+    z-index: 9999;
+    max-width: 800px;
+    font-family: "A Love of Thunder";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 84px;
+    color: #ffffff;
+    height: 160px;
+}
 
 ///////////////////
 ///

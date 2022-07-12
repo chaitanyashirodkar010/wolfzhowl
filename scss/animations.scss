@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-std");
+
 $darkgrey: #0d0d0d;
 $lightblack: #333333;
 .main-banner {
@@ -27,14 +29,18 @@ $lightblack: #333333;
         bottom: 0;
         margin: auto;
         z-index: 9;
+
         .animation-block {
             position: absolute;
             right: 30px;
             top: 0;
             bottom: 0;
             margin: auto;
+            max-width: 300px;
+            height: max-content;
             img {
                 max-width: 370px;
+                width: 100%;
             }
         }
     }
@@ -45,7 +51,7 @@ $lightblack: #333333;
 }
 .brand-animation-container {
     display: flex;
-    position: fixed;
+    // position: fixed;
     z-index: 99999;
     width: 100%;
     left: 0;
@@ -106,4 +112,8 @@ $lightblack: #333333;
     background: transparent;
     color: white;
     padding: 0;
+}
+
+//////////////@at-root
+#typed {
 }

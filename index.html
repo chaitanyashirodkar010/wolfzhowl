@@ -8,14 +8,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="scss/animations.css"> -->
+    <link rel="stylesheet" href="scss/animations.css">
     <link rel="stylesheet" href="scss/style.css">
 
     <title>Document</title>
 </head>
 
 <body>
-    <div id="wrapper">
+
+
+
+    <div class="main-banner">
+        <div class="outer-banner">
+            <div class="initial-banner d-flex">
+                <img src="images/vector-1.png" alt="" class="w-50 banner-left-image">
+                <img src="images/vector-2.png" alt="" class="w-50 banner-right-image">
+            </div>
+            <div class="black-bg">
+                <div class="anim-text">
+                    <h1><span id="typed"></span></h1>
+                    <div class="yellow-line anim-line"></div>
+                </div>
+                <div class="animation-block">
+                    <img src="images/wh.png" class="wh" alt="">
+                    <div class="brand-animation-body">
+                        <div class="brand-animation-container">
+                            <div class="letter W"><img src="images/W.png" alt=""></div>
+                            <div class="letter O"><img src="images/O.png" alt=""></div>
+                            <div class="letter L"><img src="images/L.png" alt=""></div>
+                            <div class="letter F"><img src="images/F.png" alt=""></div>
+                            <div class="letter Z"><img src="images/Z.png" alt=""></div>
+                            <div class="letter H"><img src="images/H.png" alt=""></div>
+                            <div class="letter O"><img src="images/O.png" alt=""></div>
+                            <div class="letter W"><img src="images/W.png" alt=""></div>
+                            <div class="letter L"><img src="images/L.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="wrapper">
         <button class="anavbar-toggle" id="toggle" type="button">
             <svg viewBox="0 0 100 100" width="50">
                 <path class="line top"
@@ -173,39 +207,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="number">
-        10
-    </div>
-    <div class="main-banner">
-        <div class="outer-banner">
-            <div class="initial-banner d-flex">
-                <img src="images/vector-1.png" alt="" class="w-50 banner-left-image">
-                <img src="images/vector-2.png" alt="" class="w-50 banner-right-image">
-            </div>
-            <div class="black-bg">
-                <div class="animation-block">
-                    <img src="images/wh.png" class="wh" alt="">
-                    <div class="brand-animation-body ">
-                        <div class="brand-animation-container">
-                            <div class="letter W"><img src="images/W.png" alt=""></div>
-                            <div class="letter O"><img src="images/O.png" alt=""></div>
-                            <div class="letter L"><img src="images/L.png" alt=""></div>
-                            <div class="letter F"><img src="images/F.png" alt=""></div>
-                            <div class="letter Z"><img src="images/Z.png" alt=""></div>
-                            <div class="letter H"><img src="images/H.png" alt=""></div>
-                            <div class="letter O"><img src="images/O.png" alt=""></div>
-                            <div class="letter W"><img src="images/W.png" alt=""></div>
-                            <div class="letter L"><img src="images/L.png" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-
     <div class="about" id="about">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
@@ -222,13 +223,13 @@
             <div class="yellow-line mt-2 mb-4" data-aos="flip-left"></div>
             <div class="counter-section d-flex justify-content-between flex-column flex-md-row">
                 <div class="sections-slots">
-                    <div class="slots-title">18+</div>
+                    <div class="slots-title counter">18</div>
                     <div class="slots-description">
                         Categories
                     </div>
                 </div>
                 <div class="sections-slots my-3 my-md-0">
-                    <div class="slots-title">60+</div>
+                    <div class="slots-title counter">60</div>
                     <div class="slots-description">
                         Brands across India, SE Asia
                     </div>
@@ -512,8 +513,9 @@
                 Wolfzhowl © 2022. All rights reserved.
             </div>
         </div>
-    </footer>
+    </footer> -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
 
 
@@ -523,9 +525,7 @@
     <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
     <script>
         const tl = gsap.timeline();
         //// ***** onpage load first banner animation
@@ -536,7 +536,7 @@
             .from('.banner-right-image', { x: -1000, opacity: 0, ease: "elastic.out(1, 0.6)" }, 'start',)
         tl.to(".outer-banner", 1, { backgroundColor: '#333333', ease: "circ.out(1, 0.1)" });
         tl.from(".black-bg", 1, { scale: 0, ease: "circ.out(1, 0.1)" });
-
+        tl.from(".wh", 1, { scale: 0, ease: "circ.out(1, 0.1)" });
 
 
     </script>
@@ -570,6 +570,10 @@
         gsap.delayedCall(1, nextState);
 
     </script> -->
+    <!-- <script>
+        AOS.init();
+    </script>
+  
     <script>
         console.clear();
 
@@ -676,6 +680,14 @@
 
     </script>
     <script>
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 5,
+                time: 1000
+            });
+        });
+    </script> -->
+    <script>
         // gsap.registerPlugin(ScrollTrigger)
 
         // gsap.timeline({
@@ -696,6 +708,15 @@
 
 
     </script>
+
+    <script>
+        new Typed('#typed', {
+            strings: ['Hello from the obsessively afflicted....'],
+            typeSpeed: 40,
+            startDelay: 5500
+        });
+    </script>
+
 
 </body>
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-std");
 .main-banner {
   background-color: #0d0d0d;
   height: 100vh;
@@ -39,10 +40,15 @@
   top: 0;
   bottom: 0;
   margin: auto;
+  max-width: 300px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .main-banner .black-bg .animation-block img {
   max-width: 370px;
+  width: 100%;
 }
 
 .brand-animation-body {
@@ -53,7 +59,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
   z-index: 99999;
   width: 100%;
   left: 0;
