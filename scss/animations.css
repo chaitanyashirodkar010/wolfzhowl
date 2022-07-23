@@ -1,26 +1,30 @@
-.main-banner {
-  background-color: #0d0d0d;
-  height: 100vh;
-  position: relative;
+@font-face {
+  font-family: "A Love of Thunder";
+  src: url(../font/a-love-of-thunder.ttf);
 }
 
-.main-banner .outer-banner {
-  background-color: #ffffff;
+img.wh {
+  width: 300px;
+  position: absolute;
+  right: 60px;
+  top: 250px;
+  max-width: 370px;
 }
 
-.main-banner .outer-banner .initial-banner {
-  height: 80vh;
+.text-reveal {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 8%;
+}
+
+.overflow-hidden {
   overflow: hidden;
 }
 
-.main-banner .outer-banner .initial-banner img {
-  -webkit-transform: scaleX(1.15);
-          transform: scaleX(1.15);
-  margin-bottom: 20px;
-  margin-top: -45px;
-}
-
-.main-banner .black-bg {
+.black-bg {
+  overflow: hidden;
   background-color: #000000;
   height: 90%;
   width: 90%;
@@ -33,32 +37,21 @@
   z-index: 9;
 }
 
-.main-banner .black-bg .animation-block {
-  position: absolute;
-  right: 30px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+.black-bg .animation-block {
+  height: 100%;
+  position: relative;
 }
 
-.main-banner .black-bg .animation-block img {
+.black-bg .animation-block img {
   max-width: 370px;
-}
-
-.brand-animation-body {
-  background: black;
 }
 
 .brand-animation-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
+  position: absolute;
   z-index: 99999;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
   bottom: 0;
   margin: auto;
   -webkit-box-pack: center;
@@ -67,25 +60,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.brand-animation-container.grid,
-.brand-animation-container.columns {
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.brand-animation-container.final {
-  position: absolute;
-  left: unset;
-  right: unset;
-  top: unset;
-  bottom: unset;
+  -webkit-animation-name: tranformit;
+          animation-name: tranformit;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.08, 0.84);
+          animation-timing-function: cubic-bezier(0.42, 0, 0.08, 0.84);
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+  top: 200px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .letter {
@@ -103,39 +91,360 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2px 6px;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
 }
 
-.brand-animation-container.columns .letter {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+.letter {
+  height: 100px;
+  position: relative;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  margin: 0 -8px;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
 }
 
-.for,
-.gsap {
-  font-size: 5vmax;
-  color: white;
+.letter:nth-child(1) {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
-.for {
-  padding: 2px 1.6vmax;
-  font-weight: 300;
-  display: none;
+.letter:nth-child(2) {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
-.gsap {
-  padding: 2px 0;
-  font-weight: 600;
-  display: none;
+.letter:nth-child(3) {
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
 }
 
-.brand-animation-container.final .for,
-.brand-animation-container.final .gsap {
+.letter:nth-child(4) {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+.letter:nth-child(5) {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.letter:nth-child(6) {
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.letter:nth-child(7) {
+  -webkit-animation-duration: 2.1s;
+          animation-duration: 2.1s;
+}
+
+.letter:nth-child(8) {
+  -webkit-animation-duration: 2.4s;
+          animation-duration: 2.4s;
+}
+
+.letter:nth-child(9) {
+  -webkit-animation-duration: 2.7s;
+          animation-duration: 2.7s;
+}
+
+@-webkit-keyframes example {
+  0% {
+    margin: 0 -8px;
+    opacity: 0;
+  }
+  50% {
+    margin: 0 8px;
+    -webkit-transform: scale(0, 1) rotate(180deg) translateX(50%);
+            transform: scale(0, 1) rotate(180deg) translateX(50%);
+  }
+  100% {
+    margin: 0 -8px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes example {
+  0% {
+    margin: 0 -8px;
+    opacity: 0;
+  }
+  50% {
+    margin: 0 8px;
+    -webkit-transform: scale(0, 1) rotate(180deg) translateX(50%);
+            transform: scale(0, 1) rotate(180deg) translateX(50%);
+  }
+  100% {
+    margin: 0 -8px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes tranformit {
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+  50% {
+    right: 50%;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 1;
+  }
+  100% {
+    right: 10%;
+    opacity: 1;
+  }
+}
+
+@keyframes tranformit {
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+  50% {
+    right: 50%;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 1;
+  }
+  100% {
+    right: 10%;
+    opacity: 1;
+  }
+}
+
+.text-reveal p {
+  font-family: 'A Love of Thunder';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 66px;
+  line-height: 84px;
+  color: #FFFFFF;
+  width: 0%;
+  -webkit-animation: typing1 2s steps(84);
+          animation: typing1 2s steps(84);
+  -webkit-animation-delay: 17s;
+          animation-delay: 17s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes typing1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+#demo {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#demo h3 {
+  position: absolute;
+  font-family: 'A Love of Thunder';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 84px;
+  margin: a;
+  padding: 0;
+  width: 800px;
+  text-align: center;
+  visibility: hidden;
+  top: 30%;
+  bottom: 10%;
+  margin: auto;
+  color: #FFFFFF;
+}
+
+.textwrapper {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+}
+
+.typing-demo span {
+  font-size: 50px;
+}
+
+.typing-demo p {
+  margin: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 2em;
+  font-family: 'A Love of Thunder';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 58px;
+  text-align: center;
+  color: #FFFFFF;
   display: block;
 }
 
-.brand-animation-container.plain .letter {
-  background: transparent;
-  color: white;
-  padding: 0;
+.typing-demo p:first-child {
+  width: 100%;
+  -webkit-animation: typing01 2s steps(84);
+          animation: typing01 2s steps(84);
+  -webkit-animation-delay: 25s;
+          animation-delay: 25s;
+}
+
+.typing-demo p:nth-child(2) {
+  width: 0%;
+  -webkit-animation: typing02 2s steps(84);
+          animation: typing02 2s steps(84);
+  -webkit-animation-delay: 27s;
+          animation-delay: 27s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  color: #FFFFFF;
+}
+
+.typing-demo p:nth-child(3) {
+  width: 0%;
+  -webkit-animation: typing03 2s steps(84);
+          animation: typing03 2s steps(84);
+  -webkit-animation-delay: 29s;
+          animation-delay: 29s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  color: #FFFFFF;
+}
+
+.overlay {
+  position: relative;
+  height: 100vh;
+  background-color: #333333;
+}
+
+.overlay::after {
+  bottom: 0;
+  height: 30vh;
+  content: "";
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.159)), color-stop(#00000080), color-stop(#000000d4), to(black));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.159), #00000080, #000000d4, black);
+}
+
+@-webkit-keyframes typing01 {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing01 {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes typing02 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing02 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes typing03 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing03 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
 /*# sourceMappingURL=animations.css.map */

@@ -4,6 +4,7 @@ $yellow: #f9ad19;
     font-family: "A Love of Thunder";
     src: url(../font/a-love-of-thunder.ttf);
 }
+
 .anavbar-toggle {
     transition: transform 400ms;
     user-select: none;
@@ -45,6 +46,7 @@ $yellow: #f9ad19;
         }
     }
 }
+
 .anavbar-toggle.active {
     transform: rotate(45deg);
     .line {
@@ -57,10 +59,10 @@ $yellow: #f9ad19;
         stroke-dashoffset: -138px;
     }
 }
+
 .anavbar {
     position: fixed;
     width: 100%;
-    height: 100%;
     z-index: 2;
     display: none;
     align-items: center;
@@ -123,11 +125,13 @@ $yellow: #f9ad19;
 .navbar {
     padding: 10px 0;
 }
+
 @media screen and (max-width: 992px) {
     .container {
         max-width: 85% !important;
     }
 }
+
 .grid-hero-banner {
     .image {
         display: flex;
@@ -139,14 +143,9 @@ $yellow: #f9ad19;
         position: relative;
         background-color: #f9ad19;
     }
-
     img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
         transform-origin: left;
     }
-
     .image-container,
     .image-container-2 {
         visibility: hidden;
@@ -156,7 +155,6 @@ $yellow: #f9ad19;
         overflow: hidden;
         background-color: #f9ad19;
     }
-
     @media screen and (max-width: 992px) {
         .container {
             max-width: 99% !important;
@@ -167,7 +165,7 @@ $yellow: #f9ad19;
     }
     background-color: white;
     .row {
-        & > .col-md-5 {
+        &>.col-md-5 {
             @media screen and (min-width: 992px) {
                 height: 100vh;
             }
@@ -230,7 +228,6 @@ $yellow: #f9ad19;
                 font-size: 1.6em;
             }
             line-height: 35px;
-
             color: #000000;
         }
         .mainlogo {
@@ -266,11 +263,11 @@ $yellow: #f9ad19;
             font-size: 18px;
             line-height: 21px;
             text-align: center;
-
             color: #000000;
         }
     }
 }
+
 @media screen and (max-width: 992px) {
     .small {
         &-top-row {
@@ -293,13 +290,14 @@ $yellow: #f9ad19;
         }
     }
 }
+
 body {
-    background: #e3e3e3;
     letter-spacing: 0.2px;
 }
+
 // font-family: 'Avenir LT Std', sans-serif;
 .yellow-line {
-    border: 1px solid $yellow;
+    border-bottom: 1px solid $yellow;
     position: relative;
     &::before,
     &::after {
@@ -320,6 +318,7 @@ body {
         right: -5px;
     }
 }
+
 .description {
     font-family: "Avenir LT Std";
     font-style: normal;
@@ -329,12 +328,13 @@ body {
     }
     line-height: 124%;
     /* or 26px */
-
     color: #504b4b;
 }
+
 .section {
     overflow: hidden;
 }
+
 .section- {
     &title {
         font-family: "A Love of Thunder";
@@ -362,9 +362,7 @@ body {
             font-size: 18px;
             line-height: 118%;
         }
-
         text-align: center;
-
         color: #000000;
         &-large {
             font-family: "A Love of Thunder";
@@ -373,9 +371,7 @@ body {
             font-size: 27px;
             line-height: 95.5%;
             /* identical to box height, or 26px */
-
             text-align: center;
-
             color: #010101;
         }
     }
@@ -388,12 +384,11 @@ body {
             font-size: 18px;
         }
         line-height: 118%;
-
         text-align: center;
-
         color: #504b4b;
     }
 }
+
 .about {
     background: #e3e3e3;
     padding: 50px 0;
@@ -429,8 +424,14 @@ body {
                 }
                 min-height: 104px;
                 background: #ffffff;
-                border: 1px solid rgba(0, 0, 0, 0.18);
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                border: 1px solid rgba(0,
+                0,
+                0,
+                0.18);
+                box-shadow: 0px 4px 4px rgba(0,
+                0,
+                0,
+                0.05);
                 border-radius: 4px;
                 padding: 10px;
                 display: flex;
@@ -444,9 +445,7 @@ body {
                     font-size: 29px;
                     line-height: 118%;
                     /* or 34px */
-
                     text-align: center;
-
                     color: #383535;
                 }
                 .slots-description {
@@ -456,15 +455,14 @@ body {
                     font-size: 18px;
                     line-height: 102.5%;
                     /* or 18px */
-
                     text-align: center;
-
                     color: #312f2f;
                 }
             }
         }
     }
 }
+
 // wolf-services
 .wolf-services {
     padding: 100px 0 40px;
@@ -474,7 +472,6 @@ body {
     position: relative;
     background-position-x: -100px;
     background-image: url(../images/servicesbg.png);
-
     // &::before {
     //     background-image: url(../images/servicesbg.png);
     //     content: "";
@@ -583,7 +580,6 @@ body {
         background-size: cover;
     }
     padding: 50px 0;
-
     @media screen and (min-width: 992px) {
         padding: 80px 0;
     }
@@ -632,6 +628,7 @@ body {
         }
     }
 }
+
 .brands {
     display: flex;
     margin-top: 30px;
@@ -647,6 +644,7 @@ body {
         }
     }
 }
+
 .purpose {
     padding: 80px 0;
     background: #121212;
@@ -654,6 +652,7 @@ body {
         max-width: 1112px;
     }
 }
+
 footer {
     background: url(../images/footersmbg.png);
     padding: 40px 0;
@@ -662,7 +661,6 @@ footer {
         background-size: contain;
         padding: 80px 0;
     }
-
     background-size: cover;
     .col-md-3,
     .col-md-2 {
@@ -697,7 +695,6 @@ footer {
         font-size: 16px;
         line-height: 118%;
         /* or 19px */
-
         color: #595858;
     }
     ul {
@@ -712,7 +709,6 @@ footer {
                 line-height: 168.5%;
                 text-decoration: none;
                 /* or 27px */
-
                 color: #595858;
             }
         }
