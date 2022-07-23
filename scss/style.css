@@ -139,12 +139,11 @@
 }
 
 body {
-  background: #e3e3e3;
   letter-spacing: 0.2px;
 }
 
 .yellow-line {
-  border: 1px solid #f9ad19;
+  border-bottom: 1px solid #f9ad19;
   position: relative;
 }
 

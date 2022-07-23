@@ -4,6 +4,7 @@ $yellow: #f9ad19;
     font-family: "A Love of Thunder";
     src: url(../font/a-love-of-thunder.ttf);
 }
+
 .navbar {
     padding: 10px 0;
     .hamburger {
@@ -20,11 +21,12 @@ $yellow: #f9ad19;
         }
     }
 }
+
 .grid-hero-banner {
     height: 100vh;
     background-color: white;
     .row {
-        & > .col-md-5 {
+        &>.col-md-5 {
             height: 100vh;
             @media screen and (min-width: 992px) {
                 width: 38%;
@@ -71,7 +73,6 @@ $yellow: #f9ad19;
             font-size: 27px;
             line-height: 35px;
             /* identical to box height */
-
             color: #000000;
         }
         .mainlogo {
@@ -97,18 +98,18 @@ $yellow: #f9ad19;
             font-size: 18px;
             line-height: 21px;
             text-align: center;
-
             color: #000000;
         }
     }
 }
+
 body {
-    background: #e3e3e3;
     letter-spacing: 0.2px;
 }
+
 // font-family: 'Avenir LT Std', sans-serif;
 .yellow-line {
-    border: 1px solid $yellow;
+    border-bottom: 1px solid $yellow;
     position: relative;
     &::before,
     &::after {
@@ -129,6 +130,7 @@ body {
         right: -5px;
     }
 }
+
 .description {
     font-family: "Avenir LT Std";
     font-style: normal;
@@ -136,9 +138,9 @@ body {
     font-size: 21px;
     line-height: 124%;
     /* or 26px */
-
     color: #504b4b;
 }
+
 .section- {
     &title {
         font-family: "A Love of Thunder";
@@ -155,9 +157,7 @@ body {
         font-weight: 400;
         font-size: 18px;
         line-height: 118%;
-
         text-align: center;
-
         color: #000000;
         &-large {
             font-family: "A Love of Thunder";
@@ -166,9 +166,7 @@ body {
             font-size: 27px;
             line-height: 95.5%;
             /* identical to box height, or 26px */
-
             text-align: center;
-
             color: #010101;
         }
     }
@@ -178,12 +176,11 @@ body {
         font-weight: 400;
         font-size: 18px;
         line-height: 118%;
-
         text-align: center;
-
         color: #504b4b;
     }
 }
+
 .about {
     background: #e3e3e3;
     padding: 80px 0;
@@ -213,8 +210,14 @@ body {
                 }
                 min-height: 104px;
                 background: #ffffff;
-                border: 1px solid rgba(0, 0, 0, 0.18);
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                border: 1px solid rgba(0,
+                0,
+                0,
+                0.18);
+                box-shadow: 0px 4px 4px rgba(0,
+                0,
+                0,
+                0.05);
                 border-radius: 4px;
                 padding: 10px;
                 display: flex;
@@ -229,9 +232,7 @@ body {
                     font-size: 29px;
                     line-height: 118%;
                     /* or 34px */
-
                     text-align: center;
-
                     color: #383535;
                 }
                 .slots-description {
@@ -241,22 +242,20 @@ body {
                     font-size: 18px;
                     line-height: 102.5%;
                     /* or 18px */
-
                     text-align: center;
-
                     color: #312f2f;
                 }
             }
         }
     }
 }
+
 // wolf-services
 .wolf-services {
     padding: 100px 0 80px;
     position: relative;
     background-position-x: -100px;
     background-image: url(../images/servicesbg.png);
-
     // &::before {
     //     background-image: url(../images/servicesbg.png);
     //     content: "";
@@ -292,7 +291,6 @@ body {
             font-weight: 400;
             font-size: 38px;
             line-height: 118%;
-
             color: #000000;
         }
         ul {
@@ -355,7 +353,6 @@ body {
             font-weight: 400;
             font-size: 38px;
             line-height: 118%;
-
             color: #000000;
         }
     }
@@ -370,6 +367,7 @@ body {
         margin-top: 30px;
     }
 }
+
 .brands {
     display: flex;
     margin-top: 30px;
@@ -385,6 +383,7 @@ body {
         }
     }
 }
+
 .purpose {
     padding: 80px 0;
     background: #121212;
@@ -392,6 +391,7 @@ body {
         max-width: 1112px;
     }
 }
+
 footer {
     background: url(../images/footerbg.png);
     padding: 80px 0;
@@ -424,7 +424,6 @@ footer {
         font-size: 16px;
         line-height: 118%;
         /* or 19px */
-
         color: #595858;
     }
     ul {
@@ -439,7 +438,6 @@ footer {
                 line-height: 168.5%;
                 text-decoration: none;
                 /* or 27px */
-
                 color: #595858;
             }
         }
