@@ -3,30 +3,15 @@
     src: url(../font/a-love-of-thunder.ttf);
 }
 
-img.wh {
-    width: 300px;
-    position: absolute;
-    right: 60px;
-    top: 250px;
-    max-width: 370px;
-}
-
-.text-reveal {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 8%;
-}
-
 .overflow-hidden {
     overflow: hidden;
 }
 
 .black-bg {
+    background-image: url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
-    background-color: #000000;
-    height: 90%;
-    width: 90%;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,95 +19,20 @@ img.wh {
     bottom: 0;
     margin: auto;
     z-index: 9;
-    .animation-block {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         height: 100%;
-        position: relative;
-        img {
+        img.wh {
+            width: 300px;
             max-width: 370px;
         }
     }
 }
 
-.brand-animation-container {
-    display: flex;
-    position: absolute;
-    z-index: 99999;
-    bottom: 0;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    animation-name: tranformit;
-    animation-iteration-count: 1;
-    animation-duration: 4s;
-    animation-timing-function: cubic-bezier(.42, 0, 0.08, 0.84);
-    animation-delay: 12s;
-    top: 200px;
-    opacity: 0;
-    animation-fill-mode: forwards;
-}
-
-.letter {
-    text-align: center;
-    color: black;
-    font-size: 10vmax;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 6px;
-    animation-delay: 14s;
-}
-
-.letter {
-    height: 100px;
-    position: relative;
-    animation-name: example;
-    animation-iteration-count: 1;
-    transform: scale(0.5);
-    margin: 0 -8px;
-    $time: 0.3s;
-    animation-timing-function: ease-in;
-    @for $i from 1 through 9 {
-        &:nth-child(#{$i}) {
-            animation-duration: $time* $i;
-        }
-    }
-}
-
-// div {}
-@keyframes example {
-    0% {
-        margin: 0 -8px;
-        opacity: 0;
-    }
-    50% {
-        margin: 0 8px;
-        transform: scale(0, 1) rotate(180deg) translateX(50%);
-    }
-    100% {
-        margin: 0 -8px;
-        transform: scale(0.5);
-    }
-}
-
-@keyframes tranformit {
-    0% {
-        right: 0%;
-        opacity: 0;
-    }
-    50% {
-        right: 50%;
-        transform: scale(2);
-        opacity: 1;
-    }
-    100% {
-        right: 10%;
-        opacity: 1;
-    }
-}
-
 .text-reveal {
-    p {
+    .firstpara {
         font-family: 'A Love of Thunder';
         font-style: normal;
         font-weight: 400;
@@ -130,8 +40,23 @@ img.wh {
         line-height: 84px;
         color: #FFFFFF;
         width: 0%;
-        animation: typing1 2s steps(84);
-        animation-delay: 17s;
+        animation: typing 2s steps(84);
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        color: #FFFFFF;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .secondpara {
+        font-family: 'A Love of Thunder';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 66px;
+        line-height: 84px;
+        color: #FFFFFF;
+        width: 0%;
+        animation: typing 2s steps(84);
+        animation-delay: 2.5s;
         animation-fill-mode: forwards;
         color: #FFFFFF;
         white-space: nowrap;
@@ -143,6 +68,9 @@ img.wh {
     from {
         width: 0
     }
+    to {
+        width: 100%
+    }
 }
 
 @keyframes typing1 {
@@ -152,36 +80,6 @@ img.wh {
     to {
         width: 100%
     }
-}
-
-#demo {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-    justify-content: center;
-}
-
-#demo h3 {
-    position: absolute;
-    font-family: 'A Love of Thunder';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 84px;
-    margin: a;
-    padding: 0;
-    width: 800px;
-    text-align: center;
-    visibility: hidden;
-    top: 30%;
-    bottom: 10%;
-    margin: auto;
-    color: #FFFFFF;
 }
 
 .textwrapper {
@@ -216,25 +114,40 @@ img.wh {
         text-align: center;
         color: #FFFFFF;
         display: block;
-        &:first-child {
-            width: 100%;
-            animation: typing01 2s steps(84);
-            animation-delay: 25s;
-        }
         &:nth-child(2) {
             width: 0%;
             animation: typing02 2s steps(84);
-            animation-delay: 27s;
+            animation-delay: 9s;
             animation-fill-mode: forwards;
             color: #FFFFFF;
         }
         &:nth-child(3) {
             width: 0%;
             animation: typing03 2s steps(84);
-            animation-delay: 29s;
+            animation-delay: 11s;
             animation-fill-mode: forwards;
             color: #FFFFFF;
         }
+    }
+    .first-para {
+        margin: 0;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 2em;
+        font-family: 'A Love of Thunder';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 58px;
+        text-align: center;
+        color: #FFFFFF;
+        display: block;
+        width: 0%;
+        animation: typing02 2s steps(84);
+        animation-delay: 7s;
+        animation-fill-mode: forwards;
+        color: #FFFFFF;
     }
 }
 
