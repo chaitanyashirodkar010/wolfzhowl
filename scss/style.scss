@@ -1002,14 +1002,28 @@ h1.text-light {
 
 .page2 {
     background: #000000;
+    height: 630px;
 
     @media screen and (max-width: 992px) {
-        height: 100vh;
+        height: 85vh;
     }
 
     @media screen and (max-width: 992px) {
         .yellow-line {
             margin: auto;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .text-bloc-col {
+            margin-top: 125px;
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            max-width: 770px;
+            top: 0;
         }
     }
 
@@ -1055,7 +1069,12 @@ h1.text-light {
 }
 
 .cards-section {
-    padding: 100px 0 100px;
+    padding: 50px 0 50px;
+
+    @media screen and (min-width: 992px) {
+        padding: 100px 0 100px;
+    }
+
     position: relative;
 
     &::before {
@@ -1080,9 +1099,23 @@ h1.text-light {
     .card {
         padding: 40px;
         text-align: center;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: 992px) {
+            margin-top: 30px;
+        }
+
+        @media screen and (min-width: 992px) {
+            min-height: 605px;
+        }
 
         img {
-            height: 182px;
+            height: 50px;
+
+            @media screen and (min-width: 992px) {
+                height: 182px;
+            }
+
             object-fit: contain;
             object-position: center;
         }
@@ -1097,7 +1130,7 @@ h1.text-light {
             @media screen and (min-width: 992px) {
                 font-size: 20px;
                 line-height: 121%;
-                min-height: 120px;
+
             }
 
             text-align: center;
@@ -1173,6 +1206,47 @@ h1.text-light {
                 line-height: 168.5%;
 
                 color: #f9ad19;
+            }
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+
+            a {
+                font-family: 'Avenir LT Std';
+                font-style: normal;
+                font-weight: 750;
+                font-size: 18px;
+                line-height: 168.5%;
+                /* or 30px */
+
+                text-decoration-line: underline;
+
+                color: #272727;
+
+            }
+
+            img {
+                width: 18px;
+                height: 18px;
+                filter: invert(1);
+            }
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 47px;
+                height: 47px;
+            }
+
+            .linkedin {
+                width: 56px;
+                height: 56px;
             }
         }
     }

@@ -1100,17 +1100,30 @@ h1.text-light {
 }
 .page2 {
   background: #000000;
+  height: 630px;
 }
 
 @media screen and (max-width: 992px) {
   .page2 {
-    height: 100vh;
+    height: 85vh;
   }
 }
 
 @media screen and (max-width: 992px) {
   .page2 .yellow-line {
     margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page2 .text-bloc-col {
+    margin-top: 125px;
+  }
+  .page2 img {
+    position: absolute;
+    right: 0;
+    max-width: 770px;
+    top: 0;
   }
 }
 
@@ -1159,8 +1172,14 @@ h1.text-light {
 }
 
 .cards-section {
-  padding: 100px 0 100px;
+  padding: 50px 0 50px;
   position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section {
+    padding: 100px 0 100px;
+  }
 }
 
 .cards-section::before {
@@ -1186,14 +1205,33 @@ h1.text-light {
 .cards-section .card {
   padding: 40px;
   text-align: center;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .cards-section .card {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section .card {
+    min-height: 605px;
+  }
 }
 
 .cards-section .card img {
-  height: 182px;
+  height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section .card img {
+    height: 182px;
+  }
 }
 
 .cards-section .card p {
@@ -1210,7 +1248,6 @@ h1.text-light {
   .cards-section .card p {
     font-size: 20px;
     line-height: 121%;
-    min-height: 120px;
   }
 }
 
@@ -1299,6 +1336,56 @@ h1.text-light {
   font-size: 14px;
   line-height: 168.5%;
   color: #f9ad19;
+}
+
+.cards-section .card li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards-section .card li a {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 750;
+  font-size: 18px;
+  line-height: 168.5%;
+  /* or 30px */
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #272727;
+}
+
+.cards-section .card li img {
+  width: 18px;
+  height: 18px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.cards-section .card .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards-section .card .profile img {
+  width: 47px;
+  height: 47px;
+}
+
+.cards-section .card .profile .linkedin {
+  width: 56px;
+  height: 56px;
 }
 
 @media screen and (max-width: 992px) {
