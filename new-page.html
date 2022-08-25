@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en" style="margin-top:0 !important">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="http://wolfzhowl.cybertrom.com/wp-content/themes/wolfzhowl-website/assets/css/animations.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="http://wolfzhowl.cybertrom.com/wp-content/themes/wolfzhowl-website/assets/css/rain.css">
+
+
+    <title>wolfzhowl</title>
+
+
+
+</head>
+
+<body id="body">
+    <div class="navbar">
+        <div class="container pe-0">
+            <div class="row w-100">
+                <div class="col-md-12 d-flex justify-content-between pe-md-0">
+                    <a href="http://wolfzhowl.cybertrom.com"><img
+                            src="http://wolfzhowl.cybertrom.com/wp-content/themes/wolfzhowl-website/assets/img/navlogo.svg"
+                            alt="" class="main-sitelogo"></a>
+                    <button class="anavbar-toggle" id="toggle" type="button">
+                        <svg viewBox="0 0 100 100" width="50">
+                            <path class="line top"
+                                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                            <path class="line middle" d="m 30,50 h 40" />
+                            <path class="line bottom"
+                                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="wrapper d-none">
+        <div class="anavbar">
+            <ul>
+                <div class="menu-navbar-container">
+                    <ul id="menu-navbar" class="menu">
+                        <li id="menu-item-200"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-200"><a
+                                href="#">why us</a></li>
+                        <li id="menu-item-201"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201"><a
+                                href="#">work</a></li>
+                        <li id="menu-item-202"
+                            class="hide-a menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-202">
+                            <a href="#">Other pages</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-203"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-203"><a
+                                        href="#">wolfsight</a></li>
+                                <li id="menu-item-199"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-129 current_page_item menu-item-199">
+                                    <a href="http://wolfzhowl.cybertrom.com/?page_id=129"
+                                        aria-current="page">wolfverse</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-198"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198"><a
+                                href="http://wolfzhowl.cybertrom.com/?page_id=180">wolf pack</a></li>
+                    </ul>
+                </div>
+            </ul>
+            <a href="#" id="closebtn"><img
+                    src="http://wolfzhowl.cybertrom.com/wp-content/themes/wolfzhowl-website/assets/img/close.svg" alt=""
+                    width="18px"></a>
+        </div>
+        <div id="bg-circle"></div>
+    </div>
+
+    <div class="banner-slider py-md-5">
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">our <br> abundance</div>
+        <div class="yellow-line w-50 mt-4 mb-5 mx-auto"></div>
+        <div id="carouselExampleIndicators" class="carousel slide container" data-bs-ride="true">
+            <div class="carousel-indicators  mb-5">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">Food</button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2">Food</button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3">Food</button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="inner-carousel-item">
+                        <div class="image">
+                            <img src="img/food1.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food2.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food3.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food4.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food1.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food2.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food3.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food4.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="inner-carousel-item">
+                        <div class="image">
+                            <img src="img/food1.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food2.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food3.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food4.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food1.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="inner-carousel-item">
+                        <div class="image">
+                            <img src="img/food3.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food4.png">
+                        </div>
+                        <div class="image">
+                            <img src="img/food1.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+    </div>
+
+
+    <div class="center-slide-container">
+        <div class="section-title aos-init aos-animate" data-aos="fade-up">case <br> studies </div>
+        <div class="yellow-line w-50 mt-4 mb-5 mx-auto"></div>
+
+        <div class="center center-mode-slick-slider">
+
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="center-mode-slider">
+                <div class="center-inner-slider">
+                    <img src="img/case1.png" alt="">
+                    <div class="text-box">
+                        <b>Client Stated Task:</b>
+                        <p>
+                            Rain Forest Foods was a superbly well intentioned brand, providing people with power foods
+                            from
+                            the
+                            Rain
+                            Forests for better & vital living. However “Power Foods” had become a fashionable fad and
+                            people
+                            were
+                            not taking it seriously. Because of its elite-class “fashionable fad” associations only,
+                            there
+                            was
+                            no
+                            emotional connect with the category and hence the band was also suffering.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more-storie">
+            See all stories
+        </div>
+    </div>
+
+    <div class="textimonials py-md-5">
+
+        <div class="container">
+            <div class="section-title aos-init aos-animate w-75 mx-auto" data-aos="fade-up">Some of the behaviours we
+                have
+                changed
+                across the brand’s ecosystem
+            </div>
+            <div class="yellow-line w-50 mt-4 mb-5 mx-auto"></div>
+            <div class="textimonial-slider">
+                <div class="testimonial-card">
+                    <div class="card-inner">
+                        <img src="img/testimonial.png" alt="">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                - Head Digital Products
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="card-inner">
+                        <img src="img/testimonial.png" alt="">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                - Head Digital Products
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="card-inner">
+                        <img src="img/testimonial.png" alt="">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                - Head Digital Products
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="card-inner">
+                        <img src="img/testimonial.png" alt="">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                - Head Digital Products
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="card-inner">
+                        <img src="img/testimonial.png" alt="">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                - Head Digital Products
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="card-inner">
+                        <img src="img/testimonial.png" alt="">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                - Head Digital Products
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more-storie">
+            Reach out to us to know more behaviours we have changed
+        </div>
+    </div>
+
+    <div class="container">
+        <hr class="m-0" style="border:0; border-bottom:1px solid rgba(0, 0, 0, 0.2);">
+    </div>
+    <div class="videotestimonials py-md-5">
+
+        <div class="container">
+            <div class="section-title aos-init aos-animate w-75 mx-auto" data-aos="fade-up">Some of the behaviours we
+                have changed across the brand’s ecosystem
+            </div>
+            <div class="yellow-line w-50 mt-4 mb-5 mx-auto"></div>
+            <div class="videotestimonials-slider">
+                <div class="videotestimonials-card">
+                    <div class="videotestimonials-card-inner">
+                        <div class="brand-logo">
+                            <img src="img/raymond-logo 2.png" alt="" class="mx-auto">
+                        </div>
+
+                        <img src="img/vidsliderimage.png" alt="" class="testimonial-iamge">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                <h5>John Doe</h5>
+                                <h6>Products Manager</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="videotestimonials-card">
+                    <div class="videotestimonials-card-inner">
+                        <div class="brand-logo">
+                            <img src="img/raymond-logo 2.png" alt="" class="mx-auto">
+                        </div>
+
+                        <img src="img/vidsliderimage.png" alt="" class="testimonial-iamge">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                <h5>John Doe</h5>
+                                <h6>Products Manager</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="videotestimonials-card">
+                    <div class="videotestimonials-card-inner">
+                        <div class="brand-logo">
+                            <img src="img/raymond-logo 2.png" alt="" class="mx-auto">
+                        </div>
+
+                        <img src="img/vidsliderimage.png" alt="" class="testimonial-iamge">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                <h5>John Doe</h5>
+                                <h6>Products Manager</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="videotestimonials-card">
+                    <div class="videotestimonials-card-inner">
+                        <div class="brand-logo">
+                            <img src="img/raymond-logo 2.png" alt="" class="mx-auto">
+                        </div>
+
+                        <img src="img/vidsliderimage.png" alt="" class="testimonial-iamge">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                <h5>John Doe</h5>
+                                <h6>Products Manager</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="videotestimonials-card">
+                    <div class="videotestimonials-card-inner">
+                        <div class="brand-logo">
+                            <img src="img/raymond-logo 2.png" alt="" class="mx-auto">
+                        </div>
+
+                        <img src="img/vidsliderimage.png" alt="" class="testimonial-iamge">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                <h5>John Doe</h5>
+                                <h6>Products Manager</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="videotestimonials-card">
+                    <div class="videotestimonials-card-inner">
+                        <div class="brand-logo">
+                            <img src="img/raymond-logo 2.png" alt="" class="mx-auto">
+                        </div>
+
+                        <img src="img/vidsliderimage.png" alt="" class="testimonial-iamge">
+                        <div class="text-box">
+                            <p> “We have 20 million+ customers transacting on our BFSI platforms, how do we upsell &
+                                cross
+                                sell?
+                                We only seem to be spamming as of now. How can we heighten conversion rates amongst
+                                cohorts
+                                who
+                                are simply not interested in a set of products/services despite high fin-affordability &
+                                credit
+                                worthiness?”</p>
+                            <div class="customer">
+                                <h5>John Doe</h5>
+                                <h6>Products Manager</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        const tl = gsap.timeline();
+
+
+        tl.to(".mainwrapper", 0.1, {
+            opacity: 0
+        });
+
+
+        tl.fromTo(".yellow-line", 3, {
+            width: 0,
+            delay: 1,
+            opacity: 0
+        }, {
+            width: "100%",
+            opacity: 1,
+            delay: 1,
+
+        })
+
+        tl.to(".black-bg", 2, {
+            x: -1600,
+            delay: 1
+        });
+        tl.fromTo(".small-line", 2, {
+            width: 0,
+            delay: 5,
+            opacity: 0
+        }, {
+            width: "100%",
+            opacity: 1,
+            delay: 5,
+        })
+        tl.to(".overlay", 1, {
+            x: '-110%',
+            ease: "circ.out",
+            duration: 1,
+            display: "none",
+            delay: 1,
+
+        });
+
+
+        // tl.from(".navbar", 0.5, {
+        //     opacity: 0,
+        //     display: "none",
+        // });
+        tl.from(".mainwrapper", 0.1, {
+            opacity: 0
+        });
+        tl.from(".mainlogo", 0.8, {
+            scale: 0,
+            transformOrigin: 'center'
+        });
+        tl.to(".black-bg", 0.1, {
+            display: "none"
+        });
+        tl.to(".overlay", 0.1, {
+            display: "none"
+        });
+
+
+        var revealContainers = document.querySelectorAll(".image-container");
+
+        revealContainers.forEach((container) => {
+            var image = container.querySelector("img");
+            const tll = gsap.timeline();
+
+            tll.set(container, {
+                autoAlpha: 1
+            });
+            tll.from(container, 0.5, {
+                xPercent: -100,
+                ease: Power2.out,
+                delay: 17,
+
+            });
+            tll.from(image, 0.5, {
+                xPercent: 100,
+                scale: 1,
+                delay: -1,
+                ease: Power2.out
+            });
+        });
+
+        var revealContainers2 = document.querySelectorAll(".image-container-2");
+
+        revealContainers2.forEach((containers) => {
+            var image = containers.querySelector("img");
+            const tll = gsap.timeline();
+
+            tll.set(containers, {
+                autoAlpha: 1
+            });
+            tll.from(containers, 0.5, {
+                xPercent: 100,
+                ease: Power2.out,
+                delay: 17,
+            });
+            tll.from(image, 0.5, {
+                xPercent: 100,
+                scale: 1,
+                delay: -1,
+                ease: Power2.out
+            });
+            tll.to('.image', 0.5, {
+                backgroundColor: 'white'
+            });
+        });
+    </script>
+    <script>
+
+
+        $('.center').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            margin: 30,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 5
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
+    <script>
+
+
+        $('.textimonial-slider').slick({
+            slidesToShow: 3
+        });
+        $('.videotestimonials-slider').slick({
+            slidesToShow: 3
+        });
+    </script>
+    <script
+        src="http://wolfzhowl.cybertrom.com/wp-content/themes/wolfzhowl-website/assets/js/theme-scripts.js"></script>
+
+
+</body>
+
+</html>
+</div>

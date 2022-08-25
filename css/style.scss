@@ -1,0 +1,2222 @@
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-std");
+$yellow: #f9ad19;
+
+@font-face {
+    font-family: "A Love of Thunder";
+    src: url(../font/a-love-of-thunder.ttf);
+}
+
+.overflow-hidden {
+    @media screen and (max-width: 992px) {
+        overflow: hidden;
+    }
+}
+
+.navbar-fixed {
+    position: sticky !important;
+    top: 0;
+    z-index: 9;
+}
+
+.anavbar-toggle {
+    transition: transform 400ms;
+    user-select: none;
+    cursor: pointer;
+    z-index: 20;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-right: -15px;
+
+    .line {
+        fill: none;
+        transition-delay: 400ms, 0;
+        transition-property: stroke, stroke-dasharray, stroke-dashoffset;
+        transition-timing-function: ease;
+        transition-duration: 400ms;
+        stroke: #000;
+        stroke-width: 5.5;
+        stroke-linecap: round;
+    }
+
+    .line.top {
+        stroke-dasharray: 40 139;
+    }
+
+    .line.bottom {
+        stroke-dasharray: 20 180;
+        stroke-dashoffset: -20px;
+    }
+
+    &:not(.active) {
+        &:hover {
+            .line.bottom {
+                stroke-dasharray: 40 180;
+                stroke-dashoffset: 0px;
+            }
+        }
+    }
+}
+
+.bg-theme-grey {
+    background: #f2f2f2;
+}
+
+.anavbar-toggle.active {
+    transform: rotate(45deg);
+
+    .line {
+        stroke: #F9AD19;
+    }
+
+    .line.top {
+        stroke-dashoffset: -98px;
+    }
+
+    .line.bottom {
+        stroke-dashoffset: -138px;
+    }
+}
+
+.menu-navbar-container,
+ul {
+    height: 100%;
+    width: 100%;
+}
+
+.hide-a>a {
+    display: none !important;
+}
+
+.overflow-hide {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.anavbar {
+    position: fixed;
+    width: 100%;
+    height: 104%;
+    z-index: 2;
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    @media screen and (max-width: 992px) {
+        background-image: url(../img/mobilr-bg.png);
+        background-size: contain;
+    }
+
+    @media screen and (min-width: 992px) {
+        background-image: url(../img/navbarbg.png);
+        background-size: 100% 100%;
+    }
+
+    background-position: center;
+    top: -6px;
+    z-index: 999999;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu-navbar {
+        width: 100%;
+
+        @media screen and (max-width: 992px) {
+            transform: translateY(10%);
+            padding: 30px;
+
+            li {
+                border-right: 0px !important;
+                border-bottom: 1px solid rgba(227, 227, 227, 0.37);
+
+            }
+        }
+
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+        }
+
+        height: 100%;
+        align-items: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+
+            li {
+                border-bottom: 1px solid rgba(227, 227, 227, 0.37);
+            }
+        }
+
+        li {
+            opacity: 0;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(227, 227, 227, 0.37);
+
+            @media screen and (min-width: 992px) {
+                height: 100%;
+            }
+
+            width: 100%;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 25px;
+                display: block;
+                padding: 20px 0;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all ease 500ms;
+                position: relative;
+                font-family: 'A Love of Thunder';
+                font-style: normal;
+                font-weight: 400;
+
+                @media screen and (max-width: 992px) {
+                    font-size: 18px;
+                    display: flex;
+                    width: 100%;
+                }
+
+                font-size: 40px;
+                line-height: 51px;
+                text-align: center;
+
+                color: #DFDFDF;
+
+                &:before {
+                    content: attr(data-text);
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 70px;
+                    opacity: 0;
+                    transition: opacity ease 500ms;
+                }
+
+                &:hover {
+                    letter-spacing: 3px;
+
+                    &:before {
+                        opacity: 0.2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main-sitelogo {
+        transform: translateX(15px);
+    }
+}
+
+#bg-circle {
+    transform: scale(0);
+    width: 80px;
+    height: 80px;
+    background: #000000;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.navbar {
+    padding: 10px 0;
+
+    background-color: #F2F2F2;
+
+    @media screen and (min-width: 992px) {
+        background-color: #ffffff;
+    }
+
+    @media screen and (max-width: 992px) {
+        .container {
+            margin: unset;
+            width: 100%;
+            max-width: unset !important;
+        }
+    }
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar.bg-theme-grey {
+        position: sticky;
+        top: 0;
+        z-index: 9;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 85% !important;
+    }
+}
+
+#wrapper {
+    display: none;
+}
+
+.grid-hero-banner {
+    background: #f2f2f2;
+
+    @media screen and (max-width: 992px) {
+        padding: 20px;
+    }
+}
+
+.overflow-hidden-height {
+    height: 90vh;
+    overflow: hidden;
+}
+
+.initial-anim {
+    background: #e3e3e3;
+
+}
+
+.grid-hero-banner {
+    .image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-color: #f9ad19;
+
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform-origin: left;
+    }
+
+    .image-container,
+    .image-container-2 {
+        visibility: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            max-width: 99% !important;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        height: 100vh;
+    }
+
+    .row {
+        &>.col-sm-5 {
+            @media screen and (min-width: 992px) {
+                height: 91vh;
+            }
+
+            @media screen and (max-width: 600px) {
+                flex-direction: column;
+            }
+
+            @media screen and (min-width: 600px) {
+                width: 38%;
+            }
+
+            padding: 0;
+            display: flex;
+        }
+
+        .col-sm-2 {
+            @media screen and (min-width: 600px) {
+                width: 24%;
+            }
+        }
+    }
+
+    .col-div {
+        display: flex;
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+
+        @media screen and (min-width: 600px) {
+            flex-direction: column;
+        }
+
+        height: 100%;
+        flex: 1;
+        width: 33.33333333%;
+
+        .image {
+            border: 1px solid rgba(227, 227, 227, 0.37);
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                object-fit: cover;
+                object-position: center;
+                height: 100%;
+            }
+        }
+    }
+
+    .text-block {
+        text-align: center;
+
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+
+        width: 95%;
+        margin: auto;
+
+        h6 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1em;
+
+            @media screen and (min-width: 992px) {
+                font-size: 1.6em;
+            }
+
+            line-height: 35px;
+            color: #000000;
+        }
+
+        .mainlogo {
+            @media screen and (min-width: 992px) {
+                width: 90%;
+            }
+
+            margin-bottom: 20px;
+        }
+
+        .wolfzhowl {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 992px) {
+                width: 40%;
+                margin: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            img {
+                filter: invert(1);
+            }
+        }
+
+        .yellow-line {
+            margin: 20px auto;
+            max-width: 90%;
+        }
+
+        p {
+            font-family: "Avenir LT Std";
+            font-style: normal;
+            font-weight: 750;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color: #000000;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .mainlogo {
+        max-width: 70%;
+    }
+
+    .small {
+        &-top-row {
+            .image {
+                height: 65px;
+            }
+        }
+
+        &-mid-row {
+            .image {
+                height: 108px;
+            }
+        }
+
+        &-bottom-row {
+            .image {
+                height: 88px;
+            }
+        }
+
+        img {
+            position: absolute;
+        }
+    }
+}
+
+body {
+    // background: #e3e3e3;
+    background: #F2F2F2;
+    letter-spacing: 0.2px;
+}
+
+// font-family: 'Avenir LT Std', sans-serif;
+.yellow-line {
+    border-bottom: 1px solid $yellow;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        background: $yellow;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        bottom: -1px;
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    &::before {
+        left: -5px;
+    }
+
+    &::after {
+        right: -5px;
+    }
+}
+
+.small-line {
+    border-bottom: 1px solid $yellow;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        background: $yellow;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        bottom: -1px;
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    &::before {
+        left: -5px;
+    }
+
+    &::after {
+        right: -5px;
+    }
+}
+
+.description {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+
+    @media screen and (min-width: 992px) {
+        font-size: 21px;
+    }
+
+    line-height: 124%;
+
+    color: #504b4b;
+}
+
+.section {
+    overflow: hidden;
+}
+
+.section- {
+    &title {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8em;
+
+        @media screen and (max-width: 992px) {
+            margin: auto;
+            line-height: 95.5%;
+        }
+
+        @media screen and (min-width: 992px) {
+            font-size: 3em;
+            line-height: 58px;
+        }
+
+        text-align: center;
+        color: #000000;
+    }
+
+    &subtitle {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 118%;
+
+        @media screen and (min-width: 992px) {
+            font-size: 18px;
+            line-height: 118%;
+        }
+
+        text-align: center;
+        color: #000000;
+
+        &-large {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 27px;
+            line-height: 95.5%;
+
+            text-align: center;
+            color: #010101;
+        }
+    }
+
+    &description {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+
+        @media screen and (min-width: 992px) {
+            font-size: 18px;
+        }
+
+        line-height: 118%;
+        text-align: center;
+        color: #504b4b;
+    }
+}
+
+.about {
+    z-index: 2;
+    background: #e3e3e3;
+    padding: 50px 0;
+
+    @media screen and (min-width: 992px) {
+        position: sticky;
+        padding: 80px 0 150px;
+        top: 30px;
+    }
+
+    .container {
+        max-width: 500px;
+
+        .section- {
+            &description {
+                margin-top: 25px;
+                margin-bottom: 25px;
+                font-size: 14px;
+            }
+
+            &subtitle {
+                font-size: 14px;
+            }
+        }
+
+        .yellow-line {
+            margin: auto;
+            width: 90%;
+        }
+
+        .counter-section {
+            @media screen and (max-width: 600px) {
+                max-width: 200px;
+                margin: auto;
+            }
+
+            .sections-slots {
+                @media screen and (min-width: 992px) {
+                    flex: 1;
+
+                    &:nth-child(2) {
+                        margin: 0 10px;
+                    }
+                }
+
+                @media screen and (min-width: 992px) {
+                    min-width: 122px;
+                }
+
+                min-height: 104px;
+                background: #ffffff;
+                border: 1px solid rgba(0, 0, 0, 0.18);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                border-radius: 4px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                .slots-title {
+                    font-family: "A Love of Thunder";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 29px;
+                    line-height: 118%;
+
+                    text-align: center;
+                    color: #383535;
+                }
+
+                .slots-description {
+                    font-family: "Avenir LT Std";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 102.5%;
+
+                    text-align: center;
+                    color: #312f2f;
+                }
+            }
+        }
+    }
+
+    .section-description {
+        font-weight: 300;
+    }
+}
+
+// wolf-services
+.wolf-services {
+    padding: 100px 0 40px;
+
+    @media screen and (max-width: 992px) {
+        overflow: hidden;
+    }
+
+    @media screen and (min-width: 992px) {
+        padding: 100px 0 80px;
+    }
+
+    position: relative;
+    background-position-x: -100px;
+    background-image: url(../img/servicesbg2.png);
+    z-index: 2;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     height: 100%;
+    //     left: 0;
+    //     top: 80px;
+    //     width: 100%;
+    //     background: #e3e3e3;
+    //     z-index: -1;
+    // }
+
+    img {
+        max-width: 468px;
+        width: 100%;
+    }
+
+    .container {
+        max-width: 1112px;
+    }
+
+    .text-block {
+        margin: auto;
+        text-align: center;
+        max-width: 496px;
+
+        .yellow-line {
+            width: 70%;
+            margin: auto;
+        }
+    }
+
+    .image-text-block {
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
+
+        h6 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 118%;
+            text-align: center;
+
+            @media screen and (min-width: 992px) {
+                font-size: 38px;
+                text-align: left;
+            }
+
+            color: #000000;
+        }
+
+        ul {
+            li {
+                font-family: "Avenir LT Std";
+                font-style: normal;
+                font-weight: 750;
+
+                @media screen and (min-width: 992px) {
+                    font-size: 21px;
+                }
+
+                line-height: 192%;
+                color: #504b4b;
+                position: relative;
+                list-style-type: none;
+
+                &::after {
+                    content: "";
+                    height: 43px;
+                    width: 43px;
+                    position: absolute;
+                    top: -5px;
+
+                    @media screen and (min-width: 992px) {
+                        top: 3px;
+                        bottom: 0;
+                        margin: auto;
+                    }
+
+                    left: -40px;
+                    background-image: url(../img/arrow.svg);
+                    background-size: 100%;
+                    background-position: center;
+                }
+            }
+        }
+    }
+
+    .section-subtitle-large {
+        font-size: 13px;
+
+        @media screen and (min-width: 992px) {
+            font-size: 27px;
+        }
+    }
+
+    .reverse-row {
+        .row {
+            @media screen and (min-width: 992px) {
+                margin: 150px 0;
+            }
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                justify-content: center;
+
+                .col-md-6:nth-child(2) {
+                    @media screen and (min-width: 992px) {
+                        padding-left: 8%;
+                    }
+                }
+
+                .col-md-6:nth-child(1) {
+                    @media screen and (min-width: 992px) {
+                        padding-right: 2%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tools {
+    background-color: #f7f7f7;
+    background-image: url(../img/toolsbg.png);
+    background-size: contain;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (min-width: 992px) {
+        background-size: cover;
+    }
+
+    padding: 50px 0;
+
+    @media screen and (min-width: 992px) {
+        padding: 80px 0;
+    }
+
+    .container {
+        max-width: 1112px;
+    }
+
+    .section-title {
+        font-size: 27px;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 992px) {
+            font-size: 48px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .image-text-block {
+        text-align: center;
+
+        @media screen and (min-width: 992px) {
+            text-align: left;
+        }
+
+        h6 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            margin-top: 20px;
+
+            @media screen and (min-width: 992px) {
+                font-size: 38px;
+            }
+
+            line-height: 118%;
+            color: #000000;
+        }
+    }
+
+    .row {
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .description {
+        line-height: 130%;
+        margin-top: 10px;
+        font-size: 15px;
+
+        @media screen and (min-width: 992px) {
+            line-height: 130%;
+            margin-top: 30px;
+        }
+    }
+}
+
+.brands {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    margin-top: 30px;
+
+    .brand {
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+        min-height: 92px;
+        flex: 1;
+
+        &:nth-child(2) {
+            margin: 0 10px;
+        }
+
+        img {
+            max-width: 65%;
+        }
+    }
+}
+
+.purpose {
+    position: relative;
+    z-index: 2;
+    padding: 80px 0;
+    background: #121212;
+
+    .container {
+        max-width: 1112px;
+    }
+}
+
+footer {
+    background: url(../img/footersmbg.png);
+    padding: 40px 0;
+    background-size: 110% 102%;
+    background-position-x: -5px;
+
+    @media screen and (min-width: 992px) {
+        background: url(../img/footerbg.png);
+        background-size: contain;
+        padding: 80px 0;
+    }
+
+    background-size: cover;
+
+    .col-md-3,
+    .col-md-2,
+    .col-md-auto {
+        position: relative;
+
+        @media screen and (min-width: 992px) {
+            &::after {
+                content: "";
+                position: absolute;
+                border-right: 1px solid rgba(255, 255, 255, 0.26);
+                height: 100%;
+                right: -30px;
+                top: 0;
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+    }
+
+    h6 {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 100.5%;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 750;
+        font-size: 16px;
+        line-height: 125%;
+
+        color: #595858;
+    }
+
+    ul {
+        padding-left: 0;
+
+        li {
+            list-style-type: none;
+
+            a {
+                font-family: "Avenir LT Std";
+                font-style: normal;
+                font-weight: 750;
+                font-size: 16px;
+                line-height: 168.5%;
+                text-decoration: none;
+
+                color: #595858;
+
+                &:hover {
+                    color: #f9ad19;
+                }
+            }
+        }
+    }
+
+    .border-bottom {
+        border-bottom: thin solid #595858 !important;
+
+        @media screen and (max-width: 992px) {
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+
+        @media screen and (min-width: 992px) {
+            border-bottom: none !important;
+        }
+    }
+
+    .copyright {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+
+        @media screen and (min-width: 992px) {
+            font-size: 15px;
+        }
+
+        line-height: 18px;
+        color: #9b9797;
+    }
+}
+
+.anim-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 50px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+
+    .yellow-line {
+        margin-top: 20px;
+    }
+}
+
+h1.text-light {
+    z-index: 9999;
+    max-width: 800px;
+    font-family: "A Love of Thunder";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 84px;
+    color: #ffffff;
+    height: 160px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+
+    &.a {
+        background-color: red;
+    }
+
+    &.b {
+        background-color: green;
+    }
+
+    &.c {
+        background-color: blue;
+    }
+}
+
+
+
+.page2 {
+    background: #000000;
+    height: 630px;
+
+    @media screen and (max-width: 992px) {
+        height: 85vh;
+    }
+
+    @media screen and (max-width: 992px) {
+        .yellow-line {
+            margin: auto;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .text-bloc-col {
+            margin-top: 125px;
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            max-width: 770px;
+            top: 66px;
+        }
+    }
+
+    h6 {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 102.5%;
+
+        @media screen and (max-width: 992px) {
+            text-align: center;
+        }
+
+        @media screen and (min-width: 992px) {
+            font-size: 43px;
+            line-height: 102.5%;
+        }
+
+        color: #ffffff;
+    }
+
+    ul {
+        li {
+            font-family: "Avenir LT Std";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 144.5%;
+
+            @media screen and (max-width: 992px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 992px) {
+                font-size: 25px;
+                line-height: 144.5%;
+            }
+
+            color: #ffffff;
+        }
+    }
+}
+
+.cards-section {
+    padding: 50px 0 50px;
+
+    @media screen and (min-width: 992px) {
+        padding: 100px 0 100px;
+    }
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -75px;
+        left: 0;
+        background-image: url(../img/servicesbg.png);
+        background-size: 150%;
+
+        @media screen and (min-width: 992px) {
+            background-size: 110%;
+        }
+
+        background-position-x: -70px;
+        width: 100%;
+        z-index: 0;
+        height: 120%;
+        right: 0;
+    }
+
+    .card {
+        padding: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+
+        @media screen and (max-width: 992px) {
+            margin-top: 30px;
+        }
+
+        @media screen and (min-width: 992px) {
+            min-height: 605px;
+            padding: 30px;
+        }
+
+        img {
+            height: 100px;
+
+            @media screen and (min-width: 992px) {
+                height: 182px;
+            }
+
+            object-fit: contain;
+            object-position: center;
+        }
+
+        p {
+            font-family: "Avenir LT Std";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 121%;
+
+            @media screen and (min-width: 992px) {
+                font-size: 20px;
+                line-height: 121%;
+
+            }
+
+            text-align: center;
+            color: #2c2b2b;
+        }
+
+        .text-line-height {
+            @media screen and (min-width: 992px) {
+                min-height: 100px;
+            }
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h5 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 121%;
+
+            @media screen and (min-width: 992px) {
+                font-size: 23px;
+                line-height: 121%;
+            }
+
+            text-align: center;
+            color: #000000;
+        }
+
+        h6 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 121%;
+
+            @media screen and (min-width: 992px) {
+                font-size: 19px;
+                line-height: 121%;
+            }
+
+            margin-bottom: 0;
+
+            text-align: center;
+
+            color: #000000;
+        }
+
+        .email {
+            font-family: "Avenir LT Std";
+            font-style: normal;
+            font-weight: 750;
+            font-size: 14px;
+            line-height: 168.5%;
+
+            color: #f9ad19;
+        }
+
+        .phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            * {
+                font-family: "Avenir LT Std";
+                font-style: normal;
+                font-weight: 750;
+                font-size: 14px;
+                line-height: 168.5%;
+
+                color: #f9ad19;
+            }
+        }
+
+        .yellow-line {
+            @media screen and (max-width: 992px) {
+                width: 80% !important;
+                margin: auto;
+            }
+        }
+
+        li {
+            justify-content: center;
+
+            a {
+                font-family: 'Avenir LT Std';
+                font-style: normal;
+                font-weight: 750;
+                font-size: 18px;
+                line-height: 168.5%;
+
+
+                text-decoration-line: underline;
+
+                color: #272727;
+
+            }
+
+            img {
+                width: 18px;
+                height: 18px;
+                filter: invert(1);
+            }
+        }
+
+        .profile {
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 47px;
+                height: 47px;
+            }
+
+            .linkedin {
+                width: 56px;
+                height: 56px;
+            }
+        }
+    }
+}
+
+.bannerpage3 {
+    .container {
+        @media screen and (max-width: 992px) {
+            max-width: 100% !important;
+            padding: 0;
+            margin: 0;
+            padding-top: 20px;
+
+            p {
+                max-width: 270px;
+                margin: auto;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 127%;
+                text-align: center;
+                color: #363535;
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+.page-3 {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: fixed;
+        width: 82%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.2);
+        top: 66px;
+    }
+}
+
+.page-3-banner {
+    @media screen and (max-width: 992px) {
+        text-align: center;
+    }
+
+    .yellow-line {
+        @media screen and (max-width: 992px) {
+            margin: auto;
+        }
+    }
+
+    .title {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+
+        @media screen and (max-width: 992px) {
+            font-weight: 400;
+            font-size: 27px;
+            line-height: 95.5%;
+        }
+
+        font-weight: 400;
+        font-size: 98px;
+        line-height: 91px;
+        color: #000000;
+    }
+
+    p {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+
+        @media screen and (max-width: 992px) {
+            font-size: 12px;
+            line-height: 127%;
+        }
+
+        font-weight: 750;
+        font-size: 38px;
+        line-height: 130%;
+        color: #000000;
+    }
+}
+
+.team {
+    position: relative;
+    padding: 50px 0;
+
+    @media screen and (min-width: 992px) {
+        padding: 100px 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -45px;
+        left: 0;
+        background-image: url(../img/servicesbg.png);
+        background-size: 150%;
+
+        @media screen and (min-width: 992px) {
+            background-size: 110%;
+            top: -75px;
+        }
+
+        background-position-x: -70px;
+        width: 100%;
+        z-index: 0;
+        height: 120%;
+        right: 0;
+        z-index: -1;
+    }
+
+    .carder {
+        background: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+
+        @media screen and (max-width: 992px) {
+            margin-bottom: 30px;
+        }
+
+        .card-profile-image {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background: rgba(249, 173, 25, 0.66);
+                mix-blend-mode: multiply;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+
+            }
+        }
+
+        a.linkedin {
+            display: block;
+            position: absolute;
+            top: -35px;
+            right: 0;
+        }
+
+        h5 {
+            font-family: "A Love of Thunder";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 109%;
+            color: #000000;
+        }
+
+        p {
+            font-family: "Avenir LT Std";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 109%;
+            color: #313131;
+        }
+
+        .card-footer {
+            background: #181818;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+
+            h6 {
+                font-family: "A Love of Thunder";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 109%;
+                color: #f9ad19;
+            }
+
+            .exp {
+                font-family: "Avenir LT Std";
+                font-style: normal;
+                font-weight: 750;
+                font-size: 17px;
+                line-height: 110%;
+                color: #ffffff;
+            }
+        }
+
+        .card-footer-2 {
+            h6 {
+                font-family: "A Love of Thunder";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 109%;
+
+                color: #f9ad19;
+            }
+
+            .exp {
+                font-family: "Avenir LT Std";
+                font-style: normal;
+                font-weight: 750;
+                font-size: 17px;
+                line-height: 109%;
+
+                color: #555555;
+            }
+
+            .wrkdacross {
+                font-family: "Avenir LT Std";
+                font-style: normal;
+                font-weight: 750;
+                font-size: 15px;
+                line-height: 109%;
+                color: #000000;
+                min-height: unset;
+                margin-bottom: 20px;
+
+                p {
+                    font-family: "Avenir LT Std";
+                    font-style: normal;
+                    font-weight: 750;
+                    font-size: 15px;
+                    line-height: 109%;
+                    min-height: unset;
+                    margin-bottom: 0;
+
+                }
+            }
+        }
+
+        &:hover {
+            .card-profile-image::after {
+                opacity: 1;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+}
+
+#closebtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.for-border {
+
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+}
+
+.toggle-view-more {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 750;
+    font-size: 18px;
+    text-align: center;
+    color: rgba(225, 152, 9, 0.84);
+}
+
+.wolf-tale {
+    background-image: url(../img/backgroud.png);
+
+    @media screen and (max-width: 992px) {
+        .text-block {
+            padding: 30px;
+            text-align: center;
+
+            .yellow-line {
+                margin: auto;
+            }
+        }
+
+        .row {
+            margin: auto;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        padding-left: 116px;
+    }
+
+    .title {
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+
+        @media screen and (max-width: 992px) {
+            font-size: 43px;
+            line-height: 119%;
+        }
+
+        @media screen and (min-width: 992px) {
+            max-width: 370px;
+        }
+
+        font-size: 125px;
+        line-height: 90%;
+        color: #ffffff;
+    }
+
+    .subtitle {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+
+        @media screen and (max-width: 992px) {
+            font-size: 26px;
+            line-height: 93%;
+        }
+
+        font-weight: 750;
+        font-size: 38px;
+        line-height: 93%;
+
+        color: #ffffff;
+    }
+}
+
+.name-descript {
+    background-color: #f7f7f7;
+    background-image: url(../img/backgri2.png);
+    padding-bottom: 100px;
+    padding-bottom: 100px;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    h6 {
+        @media screen and (max-width: 992px) {
+            font-size: 27px;
+            line-height: 100.5%;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 992px) {
+            max-width: 380px;
+        }
+
+        font-family: "A Love of Thunder";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 49px;
+        line-height: 100.5%;
+
+        color: #000000;
+    }
+
+    p {
+        @media screen and (max-width: 992px) {
+            font-size: 12px;
+            line-height: 154.5%;
+
+            text-align: center;
+        }
+
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 154.5%;
+
+        color: #504b4b;
+    }
+}
+
+footer {
+    position: relative;
+    z-index: 9;
+}
+
+.carder {
+    padding: 0;
+
+    @media screen and (min-width: 992px) {
+
+        width: 100%;
+        max-width: 356px;
+
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .view-more-members {
+        &>div {
+            padding: 0;
+        }
+    }
+}
+
+.team .carder h5 {
+    font-family: "A Love of Thunder";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 109%;
+    color: #000000;
+    max-width: 200px;
+    min-height: 45px;
+}
+
+.team .carder p {
+    min-height: 55px;
+}
+
+.last-para {
+    min-height: unset !important;
+    margin-bottom: 20px;
+}
+
+.team .carder .card-footer-2 h6 {
+    @media screen and (min-width: 992px) {
+        min-height: 55px;
+    }
+}
+
+.website_link {
+    display: none;
+}
+
+
+
+
+.logoimage {
+    transform: rotate(0deg) scale(0.7) translateZ(0);
+    transition: all 0.4s cubic-bezier(.8, 1.8, .75, .75);
+    cursor: pointer;
+}
+
+.logoimage:hover {
+    transform: rotate(10deg) scale(0.9);
+}
+
+
+.banner-slider {
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        position: absolute;
+        top: -15px;
+        bottom: unset;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background: 0 0;
+        border: 0;
+        opacity: 1;
+        transition: opacity .15s ease;
+        background: red;
+        margin: auto;
+        font-size: 0;
+        width: 60.39px;
+        height: 60.39px;
+        background-image: url(../img/arrowcircle.svg);
+        background-size: cover;
+        border: none;
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    .carousel-control-next {
+        right: 2%;
+    }
+
+    .carousel-control-prev {
+        left: 2%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        display: none;
+    }
+
+    .container {
+        max-width: 1082px;
+    }
+
+    .carousel-item {
+        .inner-carousel-item {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .image {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 38px;
+
+            img {
+                max-width: 175px;
+
+            }
+
+        }
+    }
+
+    .carousel-indicators {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+
+        button {
+            all: unset;
+            font-family: 'A Love of Thunder';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 118%;
+            text-align: center;
+            margin: 0 35px;
+
+            &.active {
+                color: #F9AD19;
+            }
+        }
+    }
+}
+
+.center-slide-container {
+    position: relative;
+    background-position-x: -100px;
+    background-image: url(../img/servicesbg2.png);
+    z-index: 2;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.more-storie {
+    font-family: 'Avenir LT Std';
+    font-style: normal;
+    font-weight: 750;
+    font-size: 19px;
+    line-height: 117.5%;
+    /* or 22px */
+
+    text-align: center;
+
+    color: rgba(225, 152, 9, 0.84);
+    margin: auto;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.center-mode-slick-slider {
+
+
+    .slick-slide {
+        margin: 0 5px;
+    }
+
+    .slick-slide {
+        margin: 0 5px;
+        overflow: hidden;
+        height: 421px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+
+
+    .center-mode-slider {
+        .text-box {
+            padding: 40px;
+            padding-top: 10px;
+            opacity: 0;
+            transition: all 0.5s ease-in;
+            transition-delay: 0.5s;
+        }
+
+        b,
+        p {
+            font-family: 'Avenir LT Std';
+            font-style: normal;
+            font-size: 16px;
+            line-height: 125.5%;
+            text-align: center;
+            color: #313131;
+            text-align: center;
+            display: block;
+        }
+
+        p {
+            font-weight: 300;
+        }
+    }
+
+    .center-mode-slider.slick-slide.slick-current.slick-active.slick-center {
+        .center-inner-slider {
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.17);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+
+        .text-box {
+            opacity: 1;
+        }
+
+        height: unset;
+
+    }
+
+    .center-mode-slider.slick-slide {}
+
+    button.slick-next.slick-arrow {
+
+        right: 33%;
+
+
+
+    }
+
+    button.slick-prev.slick-arrow {
+        left: 33%;
+        transform: rotate(180deg);
+        top: 481px;
+    }
+
+}
+
+.slick-slider {
+
+    button {
+        font-size: 0;
+        width: 60.39px;
+        height: 60.39px;
+        position: absolute;
+        top: 490px;
+        background-image: url(../img/arrowcircle.svg);
+        background-size: cover;
+        border: none;
+        background-color: transparent;
+        z-index: 2;
+
+    }
+}
+
+
+.textimonials {
+    background-color: #f7f7f7;
+    background-image: url(../img/toolsbg.png);
+    background-size: contain;
+    position: relative;
+    z-index: 2;
+    padding: 50px 0;
+    background-size: cover;
+
+    .slick-slide {
+        margin: 0 5px;
+    }
+
+    .testimonial-card {
+
+        padding-top: 50px;
+
+        .card-inner {
+            padding: 40px;
+            position: relative;
+            padding-top: 100px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.17);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+            text-align: center;
+
+
+            img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: -50px;
+            }
+
+            .customer {
+                font-family: 'A Love of Thunder';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 134.5%;
+                /* or 23px */
+
+                text-align: center;
+
+                color: #000000;
+            }
+        }
+    }
+
+    button.slick-next.slick-arrow {
+
+        right: -25px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+
+
+
+    }
+
+    button.slick-prev.slick-arrow {
+        left: -25px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+.videotestimonials {
+    background-color: #f7f7f7;
+    background-image: url(../img/toolsbg.png);
+    background-size: contain;
+    position: relative;
+    z-index: 2;
+    padding: 50px 0;
+    background-size: cover;
+
+    .slick-slide {
+        margin: 0 0;
+    }
+
+    .videotestimonials-card-inner {
+        padding: 25px;
+
+        .testimonial-iamge {
+            filter: drop-shadow(0px 5px 13px rgba(0, 0, 0, 0.18));
+            border-radius: 3px;
+            width: 100%;
+            display: block;
+        }
+
+        .brand-logo {}
+
+        .text-box {
+            padding: 20px;
+            padding-top: 10px;
+
+            p {
+                font-family: 'Avenir LT Std';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 134.5%;
+                /* or 23px */
+
+                text-align: center;
+
+                color: #504B4B;
+            }
+        }
+
+        .customer {
+            h5 {
+                font-family: 'A Love of Thunder';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 134.5%;
+                /* identical to box height, or 23px */
+
+                text-align: center;
+
+                color: #000000;
+            }
+
+            h6 {
+                font-family: 'A Love of Thunder';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 134.5%;
+                /* identical to box height, or 23px */
+
+                text-align: center;
+
+                color: #000000;
+            }
+        }
+    }
+
+    button.slick-next.slick-arrow {
+
+        right: -25px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+
+
+
+    }
+
+    button.slick-prev.slick-arrow {
+        left: -25px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}

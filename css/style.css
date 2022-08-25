@@ -1,0 +1,2343 @@
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-std");
+@font-face {
+  font-family: "A Love of Thunder";
+  src: url(../font/a-love-of-thunder.ttf);
+}
+
+@media screen and (max-width: 992px) {
+  .overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+.navbar-fixed {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 9;
+}
+
+.anavbar-toggle {
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  z-index: 20;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin-right: -15px;
+}
+
+.anavbar-toggle .line {
+  fill: none;
+  -webkit-transition-delay: 400ms, 0;
+          transition-delay: 400ms, 0;
+  -webkit-transition-property: stroke, stroke-dasharray, stroke-dashoffset;
+  transition-property: stroke, stroke-dasharray, stroke-dashoffset;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.anavbar-toggle .line.top {
+  stroke-dasharray: 40 139;
+}
+
+.anavbar-toggle .line.bottom {
+  stroke-dasharray: 20 180;
+  stroke-dashoffset: -20px;
+}
+
+.anavbar-toggle:not(.active):hover .line.bottom {
+  stroke-dasharray: 40 180;
+  stroke-dashoffset: 0px;
+}
+
+.bg-theme-grey {
+  background: #f2f2f2;
+}
+
+.anavbar-toggle.active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.anavbar-toggle.active .line {
+  stroke: #F9AD19;
+}
+
+.anavbar-toggle.active .line.top {
+  stroke-dashoffset: -98px;
+}
+
+.anavbar-toggle.active .line.bottom {
+  stroke-dashoffset: -138px;
+}
+
+.menu-navbar-container,
+ul {
+  height: 100%;
+  width: 100%;
+}
+
+.hide-a > a {
+  display: none !important;
+}
+
+.overflow-hide {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.anavbar {
+  position: fixed;
+  width: 100%;
+  height: 104%;
+  z-index: 2;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-position: center;
+  top: -6px;
+  z-index: 999999;
+}
+
+@media screen and (max-width: 992px) {
+  .anavbar {
+    background-image: url(../img/mobilr-bg.png);
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .anavbar {
+    background-image: url(../img/navbarbg.png);
+    background-size: 100% 100%;
+  }
+}
+
+.anavbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.anavbar #menu-navbar {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .anavbar #menu-navbar {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    padding: 30px;
+  }
+  .anavbar #menu-navbar li {
+    border-right: 0px !important;
+    border-bottom: 1px solid rgba(227, 227, 227, 0.37);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .anavbar #menu-navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.anavbar #menu-navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.anavbar #menu-navbar ul li {
+  border-bottom: 1px solid rgba(227, 227, 227, 0.37);
+}
+
+.anavbar #menu-navbar li {
+  opacity: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid rgba(227, 227, 227, 0.37);
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .anavbar #menu-navbar li {
+    height: 100%;
+  }
+}
+
+.anavbar #menu-navbar li a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  padding: 20px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+  position: relative;
+  font-family: 'A Love of Thunder';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 51px;
+  text-align: center;
+  color: #DFDFDF;
+}
+
+@media screen and (max-width: 992px) {
+  .anavbar #menu-navbar li a {
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.anavbar #menu-navbar li a:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 70px;
+  opacity: 0;
+  -webkit-transition: opacity ease 500ms;
+  transition: opacity ease 500ms;
+}
+
+.anavbar #menu-navbar li a:hover {
+  letter-spacing: 3px;
+}
+
+.anavbar #menu-navbar li a:hover:before {
+  opacity: 0.2;
+}
+
+@media screen and (max-width: 992px) {
+  .main-sitelogo {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+}
+
+#bg-circle {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 80px;
+  height: 80px;
+  background: #000000;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.navbar {
+  padding: 10px 0;
+  background-color: #F2F2F2;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar .container {
+    margin: unset;
+    width: 100%;
+    max-width: unset !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar.bg-theme-grey {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 85% !important;
+  }
+}
+
+#wrapper {
+  display: none;
+}
+
+.grid-hero-banner {
+  background: #f2f2f2;
+}
+
+@media screen and (max-width: 992px) {
+  .grid-hero-banner {
+    padding: 20px;
+  }
+}
+
+.overflow-hidden-height {
+  height: 90vh;
+  overflow: hidden;
+}
+
+.initial-anim {
+  background: #e3e3e3;
+}
+
+.grid-hero-banner .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f9ad19;
+}
+
+.grid-hero-banner img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.grid-hero-banner .image-container,
+.grid-hero-banner .image-container-2 {
+  visibility: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-hero-banner .container {
+    max-width: 99% !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .grid-hero-banner {
+    height: 100vh;
+  }
+}
+
+.grid-hero-banner .row > .col-sm-5 {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 992px) {
+  .grid-hero-banner .row > .col-sm-5 {
+    height: 91vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-hero-banner .row > .col-sm-5 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .grid-hero-banner .row > .col-sm-5 {
+    width: 38%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .grid-hero-banner .row .col-sm-2 {
+    width: 24%;
+  }
+}
+
+.grid-hero-banner .col-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 33.33333333%;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-hero-banner .col-div {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .grid-hero-banner .col-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.grid-hero-banner .col-div .image {
+  border: 1px solid rgba(227, 227, 227, 0.37);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-hero-banner .col-div .image img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+}
+
+.grid-hero-banner .text-block {
+  text-align: center;
+  width: 95%;
+  margin: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .grid-hero-banner .text-block {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}
+
+.grid-hero-banner .text-block h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 35px;
+  color: #000000;
+}
+
+@media screen and (min-width: 992px) {
+  .grid-hero-banner .text-block h6 {
+    font-size: 1.6em;
+  }
+}
+
+.grid-hero-banner .text-block .mainlogo {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .grid-hero-banner .text-block .mainlogo {
+    width: 90%;
+  }
+}
+
+.grid-hero-banner .text-block .wolfzhowl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  .grid-hero-banner .text-block .wolfzhowl {
+    width: 40%;
+    margin: auto;
+  }
+  .grid-hero-banner .text-block .wolfzhowl img {
+    width: 100%;
+  }
+}
+
+.grid-hero-banner .text-block .wolfzhowl img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.grid-hero-banner .text-block .yellow-line {
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.grid-hero-banner .text-block p {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (max-width: 992px) {
+  .mainlogo {
+    max-width: 70%;
+  }
+  .small-top-row .image {
+    height: 65px;
+  }
+  .small-mid-row .image {
+    height: 108px;
+  }
+  .small-bottom-row .image {
+    height: 88px;
+  }
+  .small img {
+    position: absolute;
+  }
+}
+
+body {
+  background: #F2F2F2;
+  letter-spacing: 0.2px;
+}
+
+.yellow-line {
+  border-bottom: 1px solid #f9ad19;
+  position: relative;
+}
+
+.yellow-line::before, .yellow-line::after {
+  content: "";
+  background: #f9ad19;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.yellow-line::before {
+  left: -5px;
+}
+
+.yellow-line::after {
+  right: -5px;
+}
+
+.small-line {
+  border-bottom: 1px solid #f9ad19;
+  position: relative;
+}
+
+.small-line::before, .small-line::after {
+  content: "";
+  background: #f9ad19;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.small-line::before {
+  left: -5px;
+}
+
+.small-line::after {
+  right: -5px;
+}
+
+.description {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 124%;
+  color: #504b4b;
+}
+
+@media screen and (min-width: 992px) {
+  .description {
+    font-size: 21px;
+  }
+}
+
+.section {
+  overflow: hidden;
+}
+
+.section-title {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8em;
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (max-width: 992px) {
+  .section-title {
+    margin: auto;
+    line-height: 95.5%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .section-title {
+    font-size: 3em;
+    line-height: 58px;
+  }
+}
+
+.section-subtitle {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 118%;
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (min-width: 992px) {
+  .section-subtitle {
+    font-size: 18px;
+    line-height: 118%;
+  }
+}
+
+.section-subtitle-large {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 95.5%;
+  text-align: center;
+  color: #010101;
+}
+
+.section-description {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 118%;
+  text-align: center;
+  color: #504b4b;
+}
+
+@media screen and (min-width: 992px) {
+  .section-description {
+    font-size: 18px;
+  }
+}
+
+.about {
+  z-index: 2;
+  background: #e3e3e3;
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .about {
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 80px 0 150px;
+    top: 30px;
+  }
+}
+
+.about .container {
+  max-width: 500px;
+}
+
+.about .container .section-description {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.about .container .section-subtitle {
+  font-size: 14px;
+}
+
+.about .container .yellow-line {
+  margin: auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+  .about .container .counter-section {
+    max-width: 200px;
+    margin: auto;
+  }
+}
+
+.about .container .counter-section .sections-slots {
+  min-height: 104px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .about .container .counter-section .sections-slots {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .about .container .counter-section .sections-slots:nth-child(2) {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about .container .counter-section .sections-slots {
+    min-width: 122px;
+  }
+}
+
+.about .container .counter-section .sections-slots .slots-title {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 118%;
+  text-align: center;
+  color: #383535;
+}
+
+.about .container .counter-section .sections-slots .slots-description {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 102.5%;
+  text-align: center;
+  color: #312f2f;
+}
+
+.about .section-description {
+  font-weight: 300;
+}
+
+.wolf-services {
+  padding: 100px 0 40px;
+  position: relative;
+  background-position-x: -100px;
+  background-image: url(../img/servicesbg2.png);
+  z-index: 2;
+}
+
+@media screen and (max-width: 992px) {
+  .wolf-services {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services {
+    padding: 100px 0 80px;
+  }
+}
+
+.wolf-services img {
+  max-width: 468px;
+  width: 100%;
+}
+
+.wolf-services .container {
+  max-width: 1112px;
+}
+
+.wolf-services .text-block {
+  margin: auto;
+  text-align: center;
+  max-width: 496px;
+}
+
+.wolf-services .text-block .yellow-line {
+  width: 70%;
+  margin: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services .image-text-block {
+    text-align: left;
+  }
+}
+
+.wolf-services .image-text-block h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 118%;
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services .image-text-block h6 {
+    font-size: 38px;
+    text-align: left;
+  }
+}
+
+.wolf-services .image-text-block ul li {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  line-height: 192%;
+  color: #504b4b;
+  position: relative;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services .image-text-block ul li {
+    font-size: 21px;
+  }
+}
+
+.wolf-services .image-text-block ul li::after {
+  content: "";
+  height: 43px;
+  width: 43px;
+  position: absolute;
+  top: -5px;
+  left: -40px;
+  background-image: url(../img/arrow.svg);
+  background-size: 100%;
+  background-position: center;
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services .image-text-block ul li::after {
+    top: 3px;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.wolf-services .section-subtitle-large {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services .section-subtitle-large {
+    font-size: 27px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services .reverse-row .row {
+    margin: 150px 0;
+  }
+}
+
+.wolf-services .reverse-row .row:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services .reverse-row .row:nth-child(even) .col-md-6:nth-child(2) {
+    padding-left: 8%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-services .reverse-row .row:nth-child(even) .col-md-6:nth-child(1) {
+    padding-right: 2%;
+  }
+}
+
+.tools {
+  background-color: #f7f7f7;
+  background-image: url(../img/toolsbg.png);
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .tools {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tools {
+    padding: 80px 0;
+  }
+}
+
+.tools .container {
+  max-width: 1112px;
+}
+
+.tools .section-title {
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .tools .section-title {
+    font-size: 48px;
+    margin-bottom: 0px;
+  }
+}
+
+.tools .image-text-block {
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .tools .image-text-block {
+    text-align: left;
+  }
+}
+
+.tools .image-text-block h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 20px;
+  line-height: 118%;
+  color: #000000;
+}
+
+@media screen and (min-width: 992px) {
+  .tools .image-text-block h6 {
+    font-size: 38px;
+  }
+}
+
+.tools .row:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.tools .description {
+  line-height: 130%;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .tools .description {
+    line-height: 130%;
+    margin-top: 30px;
+  }
+}
+
+.brands {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+.brands .brand {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  min-height: 92px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.brands .brand:nth-child(2) {
+  margin: 0 10px;
+}
+
+.brands .brand img {
+  max-width: 65%;
+}
+
+.purpose {
+  position: relative;
+  z-index: 2;
+  padding: 80px 0;
+  background: #121212;
+}
+
+.purpose .container {
+  max-width: 1112px;
+}
+
+footer {
+  background: url(../img/footersmbg.png);
+  padding: 40px 0;
+  background-size: 110% 102%;
+  background-position-x: -5px;
+  background-size: cover;
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    background: url(../img/footerbg.png);
+    background-size: contain;
+    padding: 80px 0;
+  }
+}
+
+footer .col-md-3,
+footer .col-md-2,
+footer .col-md-auto {
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  footer .col-md-3::after,
+  footer .col-md-2::after,
+  footer .col-md-auto::after {
+    content: "";
+    position: absolute;
+    border-right: 1px solid rgba(255, 255, 255, 0.26);
+    height: 100%;
+    right: -30px;
+    top: 0;
+  }
+  footer .col-md-3:last-child:after,
+  footer .col-md-2:last-child:after,
+  footer .col-md-auto:last-child:after {
+    display: none;
+  }
+}
+
+footer h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100.5%;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 16px;
+  line-height: 125%;
+  color: #595858;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li {
+  list-style-type: none;
+}
+
+footer ul li a {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 16px;
+  line-height: 168.5%;
+  text-decoration: none;
+  color: #595858;
+}
+
+footer ul li a:hover {
+  color: #f9ad19;
+}
+
+footer .border-bottom {
+  border-bottom: thin solid #595858 !important;
+}
+
+@media screen and (max-width: 992px) {
+  footer .border-bottom {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer .border-bottom {
+    border-bottom: none !important;
+  }
+}
+
+footer .copyright {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+  color: #9b9797;
+}
+
+@media screen and (min-width: 992px) {
+  footer .copyright {
+    font-size: 15px;
+  }
+}
+
+.anim-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 50px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.anim-text .yellow-line {
+  margin-top: 20px;
+}
+
+h1.text-light {
+  z-index: 9999;
+  max-width: 800px;
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 84px;
+  color: #ffffff;
+  height: 160px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.box.a {
+  background-color: red;
+}
+
+.box.b {
+  background-color: green;
+}
+
+.box.c {
+  background-color: blue;
+}
+
+.page2 {
+  background: #000000;
+  height: 630px;
+}
+
+@media screen and (max-width: 992px) {
+  .page2 {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page2 .yellow-line {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page2 .text-bloc-col {
+    margin-top: 125px;
+  }
+  .page2 img {
+    position: absolute;
+    right: 0;
+    max-width: 770px;
+    top: 66px;
+  }
+}
+
+.page2 h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 102.5%;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .page2 h6 {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page2 h6 {
+    font-size: 43px;
+    line-height: 102.5%;
+  }
+}
+
+.page2 ul li {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 144.5%;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .page2 ul li {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page2 ul li {
+    font-size: 25px;
+    line-height: 144.5%;
+  }
+}
+
+.cards-section {
+  padding: 50px 0 50px;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section {
+    padding: 100px 0 100px;
+  }
+}
+
+.cards-section::before {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: 0;
+  background-image: url(../img/servicesbg.png);
+  background-size: 150%;
+  background-position-x: -70px;
+  width: 100%;
+  z-index: 0;
+  height: 120%;
+  right: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section::before {
+    background-size: 110%;
+  }
+}
+
+.cards-section .card {
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .cards-section .card {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section .card {
+    min-height: 605px;
+    padding: 30px;
+  }
+}
+
+.cards-section .card img {
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section .card img {
+    height: 182px;
+  }
+}
+
+.cards-section .card p {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 121%;
+  text-align: center;
+  color: #2c2b2b;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section .card p {
+    font-size: 20px;
+    line-height: 121%;
+  }
+}
+
+.cards-section .card .text-line-height {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section .card .text-line-height {
+    min-height: 100px;
+  }
+}
+
+.cards-section .card h5 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 121%;
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section .card h5 {
+    font-size: 23px;
+    line-height: 121%;
+  }
+}
+
+.cards-section .card h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 121%;
+  margin-bottom: 0;
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-section .card h6 {
+    font-size: 19px;
+    line-height: 121%;
+  }
+}
+
+.cards-section .card .email {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 14px;
+  line-height: 168.5%;
+  color: #f9ad19;
+}
+
+.cards-section .card .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards-section .card .phone * {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 14px;
+  line-height: 168.5%;
+  color: #f9ad19;
+}
+
+@media screen and (max-width: 992px) {
+  .cards-section .card .yellow-line {
+    width: 80% !important;
+    margin: auto;
+  }
+}
+
+.cards-section .card li {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards-section .card li a {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 750;
+  font-size: 18px;
+  line-height: 168.5%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #272727;
+}
+
+.cards-section .card li img {
+  width: 18px;
+  height: 18px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.cards-section .card .profile {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards-section .card .profile img {
+  width: 47px;
+  height: 47px;
+}
+
+.cards-section .card .profile .linkedin {
+  width: 56px;
+  height: 56px;
+}
+
+@media screen and (max-width: 992px) {
+  .bannerpage3 .container {
+    max-width: 100% !important;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+  }
+  .bannerpage3 .container p {
+    max-width: 270px;
+    margin: auto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 127%;
+    text-align: center;
+    color: #363535;
+    margin: 10px auto;
+  }
+}
+
+.page-3 {
+  position: relative;
+}
+
+.page-3::after {
+  content: '';
+  position: fixed;
+  width: 82%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 66px;
+}
+
+@media screen and (max-width: 992px) {
+  .page-3-banner {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page-3-banner .yellow-line {
+    margin: auto;
+  }
+}
+
+.page-3-banner .title {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 98px;
+  line-height: 91px;
+  color: #000000;
+}
+
+@media screen and (max-width: 992px) {
+  .page-3-banner .title {
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 95.5%;
+  }
+}
+
+.page-3-banner p {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 38px;
+  line-height: 130%;
+  color: #000000;
+}
+
+@media screen and (max-width: 992px) {
+  .page-3-banner p {
+    font-size: 12px;
+    line-height: 127%;
+  }
+}
+
+.team {
+  position: relative;
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .team {
+    padding: 100px 0;
+  }
+}
+
+.team::before {
+  content: "";
+  position: absolute;
+  top: -45px;
+  left: 0;
+  background-image: url(../img/servicesbg.png);
+  background-size: 150%;
+  background-position-x: -70px;
+  width: 100%;
+  z-index: 0;
+  height: 120%;
+  right: 0;
+  z-index: -1;
+}
+
+@media screen and (min-width: 992px) {
+  .team::before {
+    background-size: 110%;
+    top: -75px;
+  }
+}
+
+.team .carder {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 992px) {
+  .team .carder {
+    margin-bottom: 30px;
+  }
+}
+
+.team .carder .card-profile-image {
+  position: relative;
+}
+
+.team .carder .card-profile-image::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(249, 173, 25, 0.66);
+  mix-blend-mode: multiply;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.team .carder a.linkedin {
+  display: block;
+  position: absolute;
+  top: -35px;
+  right: 0;
+}
+
+.team .carder h5 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 109%;
+  color: #000000;
+}
+
+.team .carder p {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 109%;
+  color: #313131;
+}
+
+.team .carder .card-footer {
+  background: #181818;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.team .carder .card-footer h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 109%;
+  color: #f9ad19;
+}
+
+.team .carder .card-footer .exp {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 17px;
+  line-height: 110%;
+  color: #ffffff;
+}
+
+.team .carder .card-footer-2 h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 109%;
+  color: #f9ad19;
+}
+
+.team .carder .card-footer-2 .exp {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 17px;
+  line-height: 109%;
+  color: #555555;
+}
+
+.team .carder .card-footer-2 .wrkdacross {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 15px;
+  line-height: 109%;
+  color: #000000;
+  min-height: unset;
+  margin-bottom: 20px;
+}
+
+.team .carder .card-footer-2 .wrkdacross p {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 15px;
+  line-height: 109%;
+  min-height: unset;
+  margin-bottom: 0;
+}
+
+.team .carder:hover .card-profile-image::after {
+  opacity: 1;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#closebtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.for-border {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.toggle-view-more {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 18px;
+  text-align: center;
+  color: rgba(225, 152, 9, 0.84);
+}
+
+.wolf-tale {
+  background-image: url(../img/backgroud.png);
+}
+
+@media screen and (max-width: 992px) {
+  .wolf-tale .text-block {
+    padding: 30px;
+    text-align: center;
+  }
+  .wolf-tale .text-block .yellow-line {
+    margin: auto;
+  }
+  .wolf-tale .row {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-tale {
+    padding-left: 116px;
+  }
+}
+
+.wolf-tale .title {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 125px;
+  line-height: 90%;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .wolf-tale .title {
+    font-size: 43px;
+    line-height: 119%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wolf-tale .title {
+    max-width: 370px;
+  }
+}
+
+.wolf-tale .subtitle {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 750;
+  font-size: 38px;
+  line-height: 93%;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .wolf-tale .subtitle {
+    font-size: 26px;
+    line-height: 93%;
+  }
+}
+
+.name-descript {
+  background-color: #f7f7f7;
+  background-image: url(../img/backgri2.png);
+  padding-bottom: 100px;
+  padding-bottom: 100px;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.name-descript h6 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 100.5%;
+  color: #000000;
+}
+
+@media screen and (max-width: 992px) {
+  .name-descript h6 {
+    font-size: 27px;
+    line-height: 100.5%;
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .name-descript h6 {
+    max-width: 380px;
+  }
+}
+
+.name-descript p {
+  font-family: "Avenir LT Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 154.5%;
+  color: #504b4b;
+}
+
+@media screen and (max-width: 992px) {
+  .name-descript p {
+    font-size: 12px;
+    line-height: 154.5%;
+    text-align: center;
+  }
+}
+
+footer {
+  position: relative;
+  z-index: 9;
+}
+
+.carder {
+  padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .carder {
+    width: 100%;
+    max-width: 356px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .view-more-members > div {
+    padding: 0;
+  }
+}
+
+.team .carder h5 {
+  font-family: "A Love of Thunder";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 109%;
+  color: #000000;
+  max-width: 200px;
+  min-height: 45px;
+}
+
+.team .carder p {
+  min-height: 55px;
+}
+
+.last-para {
+  min-height: unset !important;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .team .carder .card-footer-2 h6 {
+    min-height: 55px;
+  }
+}
+
+.website_link {
+  display: none;
+}
+
+.logoimage {
+  -webkit-transform: rotate(0deg) scale(0.7) translateZ(0);
+          transform: rotate(0deg) scale(0.7) translateZ(0);
+  -webkit-transition: all 0.4s cubic-bezier(0.8, 1.8, 0.75, 0.75);
+  transition: all 0.4s cubic-bezier(0.8, 1.8, 0.75, 0.75);
+  cursor: pointer;
+}
+
+.logoimage:hover {
+  -webkit-transform: rotate(10deg) scale(0.9);
+          transform: rotate(10deg) scale(0.9);
+}
+
+.banner-slider .carousel-control-next,
+.banner-slider .carousel-control-prev {
+  position: absolute;
+  top: -15px;
+  bottom: unset;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 1;
+  -webkit-transition: opacity .15s ease;
+  transition: opacity .15s ease;
+  background: red;
+  margin: auto;
+  font-size: 0;
+  width: 60.39px;
+  height: 60.39px;
+  background-image: url(../img/arrowcircle.svg);
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.banner-slider .carousel-control-next {
+  right: 2%;
+}
+
+.banner-slider .carousel-control-prev {
+  left: 2%;
+}
+
+.banner-slider .carousel-control-prev-icon,
+.banner-slider .carousel-control-next-icon {
+  display: none;
+}
+
+.banner-slider .container {
+  max-width: 1082px;
+}
+
+.banner-slider .carousel-item .inner-carousel-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.banner-slider .carousel-item .image {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 38px;
+}
+
+.banner-slider .carousel-item .image img {
+  max-width: 175px;
+}
+
+.banner-slider .carousel-indicators {
+  all: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.banner-slider .carousel-indicators button {
+  all: unset;
+  font-family: 'A Love of Thunder';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 118%;
+  text-align: center;
+  margin: 0 35px;
+}
+
+.banner-slider .carousel-indicators button.active {
+  color: #F9AD19;
+}
+
+.center-slide-container {
+  position: relative;
+  background-position-x: -100px;
+  background-image: url(../img/servicesbg2.png);
+  z-index: 2;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+.more-storie {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 750;
+  font-size: 19px;
+  line-height: 117.5%;
+  /* or 22px */
+  text-align: center;
+  color: rgba(225, 152, 9, 0.84);
+  margin: auto;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.center-mode-slick-slider .slick-slide {
+  margin: 0 5px;
+}
+
+.center-mode-slick-slider .slick-slide {
+  margin: 0 5px;
+  overflow: hidden;
+  height: 421px;
+}
+
+.center-mode-slick-slider .slick-slide img {
+  display: block;
+  width: 100%;
+}
+
+.center-mode-slick-slider .center-mode-slider .text-box {
+  padding: 40px;
+  padding-top: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.center-mode-slick-slider .center-mode-slider b,
+.center-mode-slick-slider .center-mode-slider p {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 125.5%;
+  text-align: center;
+  color: #313131;
+  text-align: center;
+  display: block;
+}
+
+.center-mode-slick-slider .center-mode-slider p {
+  font-weight: 300;
+}
+
+.center-mode-slick-slider .center-mode-slider.slick-slide.slick-current.slick-active.slick-center {
+  height: unset;
+}
+
+.center-mode-slick-slider .center-mode-slider.slick-slide.slick-current.slick-active.slick-center .center-inner-slider {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.center-mode-slick-slider .center-mode-slider.slick-slide.slick-current.slick-active.slick-center .text-box {
+  opacity: 1;
+}
+
+.center-mode-slick-slider button.slick-next.slick-arrow {
+  right: 33%;
+}
+
+.center-mode-slick-slider button.slick-prev.slick-arrow {
+  left: 33%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: 481px;
+}
+
+.slick-slider button {
+  font-size: 0;
+  width: 60.39px;
+  height: 60.39px;
+  position: absolute;
+  top: 490px;
+  background-image: url(../img/arrowcircle.svg);
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.textimonials {
+  background-color: #f7f7f7;
+  background-image: url(../img/toolsbg.png);
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  padding: 50px 0;
+  background-size: cover;
+}
+
+.textimonials .slick-slide {
+  margin: 0 5px;
+}
+
+.textimonials .testimonial-card {
+  padding-top: 50px;
+}
+
+.textimonials .testimonial-card .card-inner {
+  padding: 40px;
+  position: relative;
+  padding-top: 100px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.textimonials .testimonial-card .card-inner img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -50px;
+}
+
+.textimonials .testimonial-card .card-inner .customer {
+  font-family: 'A Love of Thunder';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 134.5%;
+  /* or 23px */
+  text-align: center;
+  color: #000000;
+}
+
+.textimonials button.slick-next.slick-arrow {
+  right: -25px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.textimonials button.slick-prev.slick-arrow {
+  left: -25px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.videotestimonials {
+  background-color: #f7f7f7;
+  background-image: url(../img/toolsbg.png);
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+  padding: 50px 0;
+  background-size: cover;
+}
+
+.videotestimonials .slick-slide {
+  margin: 0 0;
+}
+
+.videotestimonials .videotestimonials-card-inner {
+  padding: 25px;
+}
+
+.videotestimonials .videotestimonials-card-inner .testimonial-iamge {
+  -webkit-filter: drop-shadow(0px 5px 13px rgba(0, 0, 0, 0.18));
+          filter: drop-shadow(0px 5px 13px rgba(0, 0, 0, 0.18));
+  border-radius: 3px;
+  width: 100%;
+  display: block;
+}
+
+.videotestimonials .videotestimonials-card-inner .text-box {
+  padding: 20px;
+  padding-top: 10px;
+}
+
+.videotestimonials .videotestimonials-card-inner .text-box p {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 134.5%;
+  /* or 23px */
+  text-align: center;
+  color: #504B4B;
+}
+
+.videotestimonials .videotestimonials-card-inner .customer h5 {
+  font-family: 'A Love of Thunder';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 134.5%;
+  /* identical to box height, or 23px */
+  text-align: center;
+  color: #000000;
+}
+
+.videotestimonials .videotestimonials-card-inner .customer h6 {
+  font-family: 'A Love of Thunder';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 134.5%;
+  /* identical to box height, or 23px */
+  text-align: center;
+  color: #000000;
+}
+
+.videotestimonials button.slick-next.slick-arrow {
+  right: -25px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.videotestimonials button.slick-prev.slick-arrow {
+  left: -25px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */
